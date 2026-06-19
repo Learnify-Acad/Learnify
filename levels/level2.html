@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستوى الثاني (الصفوف 4-6) | Level 2 - Al Horya Competition</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/competition.css">
+
+    <style>
+        .level-header {
+            background: linear-gradient(135deg, #9333EA 0%, #7E22CE 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .level-icon-large {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .option-card {
+            background: white;
+            border: 3px solid var(--color-gray-200);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .option-card:hover {
+            border-color: var(--color-secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.2);
+        }
+
+        .option-recommended {
+            border-color: var(--color-gold);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFFFFF 100%);
+        }
+
+        .recommended-badge {
+            display: inline-block;
+            background: var(--color-gold);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .ideas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .idea-card {
+            background: var(--color-gray-50);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--color-secondary);
+        }
+
+        html[dir="rtl"] .idea-card {
+            border-left: none;
+            border-right: 4px solid var(--color-secondary);
+        }
+
+        .requirement-check {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .check-icon {
+            color: var(--color-success);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .grade-specific {
+            background: rgba(147, 51, 234, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-right: 4px solid var(--color-secondary);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../competition.html" class="logo">
+                    <img src="../al_horya_school.jpg" alt="Al Horya School" class="logo-img">
+                    <div class="logo-text">
+                        <h1>مسابقة التكنولوجيا</h1>
+                        <p>Technology Competition</p>
+                    </div>
+                </a>
+
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../competition.html">الرئيسية</a></li>
+                        <li><a href="level1.html">المستوى 1</a></li>
+                        <li><a href="level2.html" class="active">المستوى 2</a></li>
+                        <li><a href="level3.html">المستوى 3</a></li>
+                        <li><a href="../competition.html#contact">التواصل</a></li>
+                    </ul>
+
+                    <div class="lang-switcher">
+                        <button data-lang="ar" class="active">ع</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="level-header">
+        <div class="container">
+            <div class="level-icon-large">💻</div>
+            <h1>المستوى الثاني | Level 2</h1>
+            <h2 style="margin-top: 1rem; font-size: 2rem;">الصفوف 4 - 5 - 6</h2>
+            <p style="font-size: 1.25rem; margin-top: 1rem; opacity: 0.95;">
+                أسرار الأهرامات التفاعلية | Interactive Pyramid Secrets
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="card" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <h2>عن هذا المستوى | About This Level</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8;">
+                    مشاريع برمجية تفاعلية تربط بين التراث المصري والتكنولوجيا. يمكن للطلاب استخدام Scratch لإنشاء ألعاب
+                    وقصص تفاعلية، أو استخدام Python للطلاب الأقوياء في الصفين الخامس والسادس.
+                </p>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 1rem;">
+                    Interactive programming projects linking Egyptian heritage with technology. Students can use Scratch
+                    to create games and interactive stories, or Python for advanced Grade 5-6 students.
+                </p>
+            </div>
+
+            <h2 class="section-title">الخيارات المتاحة | Available Options</h2>
+
+            <div class="options-grid">
+                <div class="option-card option-recommended">
+                    <span class="recommended-badge">⭐ للجميع | For All</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">🎮</div>
+                    <h3>Scratch</h3>
+                    <p>برمجة مرئية - ألعاب وقصص</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">Visual programming - Games & Stories
+                    </p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>مناسب:</strong> الصفوف 4، 5، 6</small><br>
+                        <small style="color: var(--color-primary);">✅ الخيار الأساسي المفضل</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-info);">🚀 للأقوياء</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">🐍</div>
+                    <h3>Python</h3>
+                    <p>برمجة نصية متقدمة</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">Advanced text-based programming</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>مناسب:</strong> الصف 5، 6 (الأقوياء فقط)</small><br>
+                        <small style="color: var(--color-warning);">⚠️ إذا كنت تجيده جيداً</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-success);">✅ بديل</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">🧩</div>
+                    <h3>Blockly / Code.org</h3>
+                    <p>برمجة بالكتل</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">Block-based programming</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>مناسب:</strong> جميع الصفوف</small><br>
+                        <small style="color: var(--color-success);">بديل مقبول</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-success);">✅ بديل</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">📱</div>
+                    <h3>App Inventor</h3>
+                    <p>تطوير تطبيقات</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">App development</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>مناسب:</strong> الصف 5، 6</small><br>
+                        <small style="color: var(--color-success);">بديل مقبول</small>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">المتطلبات | Requirements</h2>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="card">
+                        <h3>للمشاريع البرمجية | For Programming Projects:</h3>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>3 عناصر مصرية مدمجة</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">3 integrated
+                                    Egyptian elements</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>تفاعل مع المستخدم</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">User
+                                    interaction</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>استخدام الحلقات والشروط</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Use loops &
+                                    conditionals</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>واجهة واضحة ومنظمة</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Clear and
+                                    organized interface</p>
+                            </div>
+                        </div>
+
+                        <div class="grade-specific">
+                            <strong>💻 متطلبات Scratch:</strong>
+                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                <li>3 شخصيات على الأقل (sprites)</li>
+                                <li>خلفيتان مختلفتان</li>
+                                <li>نظام نقاط أو تقدم</li>
+                                <li>أصوات أو موسيقى</li>
+                            </ul>
+                        </div>
+
+                        <div class="grade-specific"
+                            style="background: rgba(59, 130, 246, 0.1); border-color: var(--color-info);">
+                            <strong>🐍 متطلبات Python:</strong>
+                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                <li>3 دوال على الأقل (functions)</li>
+                                <li>استخدام القوائم أو القواميس</li>
+                                <li>تعليقات توضيحية بالعربي/الإنجليزي</li>
+                                <li>معالجة مدخلات المستخدم</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">أفكار للمشاريع | Project Ideas</h2>
+
+                <div class="ideas-list">
+                    <div class="idea-card">
+                        <h4>🎯 لعبة جمع الكنوز المصرية</h4>
+                        <p>لعبة تجمع فيها الكنوز من داخل الهرم</p>
+                        <small style="color: var(--color-gray-600);">Game to collect treasures inside a pyramid</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>📖 قصة تفاعلية في معبد</h4>
+                        <p>قصة تتفاعل مع اختيارات اللاعب</p>
+                        <small style="color: var(--color-gray-600);">Interactive story with player choices</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>❓ اختبار عن مصر القديمة</h4>
+                        <p>لعبة أسئلة عن الحضارة المصرية</p>
+                        <small style="color: var(--color-gray-600);">Quiz about Ancient Egypt</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🗺️ متاهة الهرم</h4>
+                        <p>لعبة للخروج من متاهة داخل هرم</p>
+                        <small style="color: var(--color-gray-600);">Maze game inside a pyramid</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🏗️ محاكي بناء الأهرامات</h4>
+                        <p>برنامج يوضح كيفية بناء الأهرامات</p>
+                        <small style="color: var(--color-gray-600);">Pyramid building simulator</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🔤 محول هيروغليفي</h4>
+                        <p>برنامج يحول الحروف لهيروغليفية</p>
+                        <small style="color: var(--color-gray-600);">Hieroglyphic converter</small>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="card"
+                        style="background: linear-gradient(135deg, #FFF3CD 0%, #FFFFFF 100%); border: 2px solid #FFA500;">
+                        <h3>📅 المواعيد المهمة</h3>
+                        <div style="margin-top: 1rem;">
+                            <p><strong>البداية:</strong> 4 ديسمبر 2025</p>
+                            <p><strong>الموعد النهائي:</strong> 18 ديسمبر 2025</p>
+                            <p><strong>النتائج:</strong> 24 ديسمبر 2025</p>
+                            <p><strong>الحفل:</strong> 30 ديسمبر 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        style="background: linear-gradient(135deg, #E0F2FE 0%, #FFFFFF 100%); border: 2px solid #3B82F6;">
+                        <h3>📝 كيفية التقديم</h3>
+                        <ol style="margin: 1rem 0 0 1.5rem;">
+                            <li>أكمل مشروعك واختبره</li>
+                            <li>احفظ الملف أو الرابط</li>
+                            <li>اكتب تعليمات الاستخدام</li>
+                            <li>سلّم لمعلم التكنولوجيا</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 4rem; padding: 3rem; background: var(--color-gray-100); border-radius: 1rem; text-align: center;">
+                <h2>📚 المواد المساعدة | Helpful Materials</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="../downloads/student-guide.html" class="btn btn-primary">📘 دليل الطالب</a>
+                    <a href="../downloads/judging-rubric.html" class="btn btn-outline">📊 معايير التقييم</a>
+                    <a href="../competition.html#contact" class="btn btn-secondary-plus">💬 اتصل بنا</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>مدرسة الحرية | Al Horya School</h3>
+                    <p>قسم التكنولوجيا | Technology Department</p>
+                </div>
+                <div>
+                    <h3>تواصل معنا | Contact</h3>
+                    <p>📱 <a href="https://wa.me/201507108558" style="color: var(--color-gray-300);">+201507108558</a>
+                    </p>
+                    <p>📘 <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                            style="color: var(--color-gray-300);">Learnify Group</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2025 - مدرسة الحرية</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                    🎓 <strong>Powered by <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                            style="color: var(--color-primary);">Learnify Academy</a></strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/competition.js"></script>
+</body>
+
+</html>

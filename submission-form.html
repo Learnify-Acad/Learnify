@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقديم المشروع | Project Submission - Al Horya School</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/competition.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="competition.html" class="logo">
+                    <img src="al_horya_school.jpg" alt="Al Horya School Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>تقديم المشروع</h1>
+                        <p>Project Submission</p>
+                    </div>
+                </a>
+
+                <div class="lang-switcher">
+                    <button data-lang="ar" class="active">ع</button>
+                    <button data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Submission Form Section -->
+    <section class="section" style="margin-top: 100px; background: var(--color-gray-50);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <!-- Header -->
+                <div class="card" style="margin-bottom: 2rem; text-align: center;">
+                    <h2 data-i18n="submission.title">تقديم المشروع</h2>
+                    <p data-i18n="submission.description">قدم مشروعك إلكترونياً من خلال النموذج التالي</p>
+
+                    <!-- Important Note -->
+                    <div
+                        style="background: #FFF3CD; padding: 1rem; border-radius: 0.5rem; margin-top: 1.5rem; border-left: 4px solid #FFA500;">
+                        <strong>⚠️ ملاحظة مهمة | Important Note:</strong><br>
+                        <span id="deadline-note">
+                            الموعد النهائي للتقديم: <strong>الأربعاء 18 ديسمبر 2025</strong><br>
+                            Submission Deadline: <strong>Wednesday, December 18, 2025</strong>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Submission Form -->
+                <form id="submission-form" class="card">
+
+                    <!-- Student Information -->
+                    <h3 data-i18n="form.studentInfo">معلومات الطالب</h3>
+
+                    <div class="form-group">
+                        <label for="student-name" class="form-label">
+                            <span data-i18n="form.studentName">اسم الطالب / الفريق</span> *
+                        </label>
+                        <input type="text" id="student-name" name="student-name" class="form-input" required
+                            data-i18n="form.studentNamePlaceholder" placeholder="أدخل اسم الطالب أو اسم الفريق">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div class="form-group">
+                            <label for="grade" class="form-label">
+                                <span data-i18n="form.grade">الصف الدراسي</span> *
+                            </label>
+                            <select id="grade" name="grade" class="form-select" required>
+                                <option value="">اختر الصف</option>
+                                <option value="1">الصف الأول</option>
+                                <option value="2">الصف الثاني</option>
+                                <option value="3">الصف الثالث</option>
+                                <option value="4">الصف الرابع</option>
+                                <option value="5">الصف الخامس</option>
+                                <option value="prep1">الأول الإعدادي</option>
+                                <option value="prep2">الثاني الإعدادي</option>
+                                <option value="prep3">الثالث الإعدادي</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category" class="form-label">
+                                <span data-i18n="form.category">الفئة</span> *
+                            </label>
+                            <select id="category" name="category" class="form-select" required>
+                                <option value="">اختر الفئة</option>
+                                <option value="level1">المستوى الأول (1-2)</option>
+                                <option value="level2">المستوى الثاني (3-5)</option>
+                                <option value="level3">المستوى الثالث (إعدادي)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="team-members" class="form-label">
+                            <span data-i18n="form.teamMembers">أعضاء الفريق (إن وجد)</span>
+                        </label>
+                        <textarea id="team-members" name="team-members" class="form-textarea" rows="3"
+                            placeholder="اكتب أسماء أعضاء الفريق (إذا كان عمل جماعي)"></textarea>
+                        <small style="color: var(--color-gray-500);">اترك فارغاً إذا كان عمل فردي</small>
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-gray-200);">
+
+                    <!-- Project Information -->
+                    <h3 data-i18n="form.projectInfo">معلومات المشروع</h3>
+
+                    <div class="form-group">
+                        <label for="project-name" class="form-label">
+                            <span data-i18n="form.projectName">اسم المشروع</span> *
+                        </label>
+                        <input type="text" id="project-name" name="project-name" class="form-input" required
+                            placeholder="أدخل اسماً مميزاً لمشروعك">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-description" class="form-label">
+                            <span data-i18n="form.projectDescription">وصف المشروع</span> *
+                        </label>
+                        <textarea id="project-description" name="project-description" class="form-textarea" rows="6"
+                            required
+                            placeholder="اشرح فكرة مشروعك، العناصر المصرية المستخدمة، والتحديات التي واجهتها (100-200 كلمة)"></textarea>
+                        <small style="color: var(--color-gray-500);">
+                            <span id="char-count">0</span> / 1000 حرف
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="egyptian-elements" class="form-label">
+                            <span data-i18n="form.egyptianElements">العناصر المصرية المستخدمة</span> *
+                        </label>
+                        <input type="text" id="egyptian-elements" name="egyptian-elements" class="form-input" required
+                            placeholder="مثال: الأهرامات، الهيروغليفية، نهر النيل، إلخ">
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-gray-200);">
+
+                    <!-- File Upload -->
+                    <h3 data-i18n="form.files">ملفات المشروع</h3>
+
+                    <div class="form-group">
+                        <label for="project-file" class="form-label">
+                            <span data-i18n="form.projectFile">ملف المشروع</span> *
+                        </label>
+                        <input type="file" id="project-file" name="project-file" class="form-input" required
+                            accept=".pdf,.zip,.sb3,.py,.jpg,.jpeg,.png">
+                        <div id="file-info" style="margin-top: 0.5rem;"></div>
+                        <small style="color: var(--color-gray-500); display: block; margin-top: 0.5rem;">
+                            الأنواع المقبولة: PDF, ZIP, SB3, PY, JPG, PNG<br>
+                            الحد الأقصى: 50 ميجابايت
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="screenshots" class="form-label">
+                            <span data-i18n="form.screenshots">صور/لقطات شاشة (اختياري)</span>
+                        </label>
+                        <input type="file" id="screenshots" name="screenshots" class="form-input"
+                            accept=".jpg,.jpeg,.png" multiple>
+                        <small style="color: var(--color-gray-500);">يمكن رفع حتى 5 صور</small>
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-gray-200);">
+
+                    <!-- Contact Information -->
+                    <h3 data-i18n="form.contact">معلومات التواصل</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div class="form-group">
+                            <label for="parent-name" class="form-label">
+                                <span data-i18n="form.parentName">اسم ولي الأمر</span> *
+                            </label>
+                            <input type="text" id="parent-name" name="parent-name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                <span data-i18n="form.phone">رقم الهاتف</span> *
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required
+                                placeholder="+20 123 456 7890">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <span data-i18n="form.email">البريد الإلكتروني</span> *
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                            placeholder="example@email.com">
+                    </div>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--color-gray-200);">
+
+                    <!-- Teacher Approval -->
+                    <h3 data-i18n="form.approval">موافقة المعلم</h3>
+
+                    <div class="form-group">
+                        <label for="teacher-name" class="form-label">
+                            <span data-i18n="form.teacherName">اسم معلم التكنولوجيا</span> *
+                        </label>
+                        <input type="text" id="teacher-name" name="teacher-name" class="form-input" required>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" id="terms" name="terms" required style="margin-top: 0.25rem;">
+                            <span style="flex: 1;">
+                                <span data-i18n="form.terms">
+                                    أوافق على أن العمل المقدم أصلي من إبداع الطالب/الفريق، وأن جميع المعلومات المقدمة
+                                    صحيحة
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="min-width: 250px;">
+                            <span data-i18n="buttons.submit">تقديم المشروع</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div style="margin-top: 1rem; text-align: center;">
+                        <a href="competition.html" style="color: var(--color-primary);">
+                            <span data-i18n="form.backToHome">← العودة للصفحة الرئيسية</span>
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Help Section -->
+                <div class="card" style="margin-top: 2rem; background: var(--color-gray-100);">
+                    <h3>💡 <span data-i18n="form.needHelp">تحتاج مساعدة؟</span></h3>
+                    <p>
+                        <strong>📧 البريد الإلكتروني:</strong> competition@alhorya.edu.eg<br>
+                        <strong>📱 واتساب:</strong> +20 123 456 7890<br>
+                        <strong>🕐 ساعات الدعم:</strong> الأحد-الخميس، 9 صباحاً - 2 مساءً
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2025 - مدرسة الحرية - قسم التكنولوجيا</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/competition.js"></script>
+
+    <!-- Additional Script for Form Enhancements -->
+    <script>
+        // Character counter
+        const descriptionField = document.getElementById('project-description');
+        const charCount = document.getElementById('char-count');
+
+        if (descriptionField && charCount) {
+            descriptionField.addEventListener('input', function () {
+                charCount.textContent = this.value.length;
+            });
+        }
+
+        // Auto-select category based on grade
+        const gradeSelect = document.getElementById('grade');
+        const categorySelect = document.getElementById('category');
+
+        if (gradeSelect && categorySelect) {
+            gradeSelect.addEventListener('change', function () {
+                const grade = this.value;
+
+                if (grade === '1' || grade === '2') {
+                    categorySelect.value = 'level1';
+                } else if (grade === '3' || grade === '4' || grade === '5') {
+                    categorySelect.value = 'level2';
+                } else if (grade.startsWith('prep')) {
+                    categorySelect.value = 'level3';
+                }
+            });
+        }
+
+        // Multiple screenshots validation
+        const screenshotsInput = document.getElementById('screenshots');
+        if (screenshotsInput) {
+            screenshotsInput.addEventListener('change', function () {
+                if (this.files.length > 5) {
+                    alert('يمكنك رفع 5 صور كحد أقصى! / You can upload maximum 5 images!');
+                    this.value = '';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

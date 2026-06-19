@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستوى الثالث (الإعدادي) | Level 3 - Al Horya Competition</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/competition.css">
+
+    <style>
+        .level-header {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .level-icon-large {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .option-card {
+            background: white;
+            border: 3px solid var(--color-gray-200);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .option-card:hover {
+            border-color: var(--color-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .option-recommended {
+            border-color: var(--color-gold);
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFFFFF 100%);
+        }
+
+        .recommended-badge {
+            display: inline-block;
+            background: var(--color-gold);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .ideas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .idea-card {
+            background: var(--color-gray-50);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--color-gold);
+        }
+
+        html[dir="rtl"] .idea-card {
+            border-left: none;
+            border-right: 4px solid var(--color-gold);
+        }
+
+        .requirement-check {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .check-icon {
+            color: var(--color-success);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .advanced-note {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-right: 4px solid var(--color-gold);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../competition.html" class="logo">
+                    <img src="../al_horya_school.jpg" alt="Al Horya School" class="logo-img">
+                    <div class="logo-text">
+                        <h1>مسابقة التكنولوجيا</h1>
+                        <p>Technology Competition</p>
+                    </div>
+                </a>
+
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../competition.html">الرئيسية</a></li>
+                        <li><a href="level1.html">المستوى 1</a></li>
+                        <li><a href="level2.html">المستوى 2</a></li>
+                        <li><a href="level3.html" class="active">المستوى 3</a></li>
+                        <li><a href="../competition.html#contact">التواصل</a></li>
+                    </ul>
+
+                    <div class="lang-switcher">
+                        <button data-lang="ar" class="active">ع</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="level-header">
+        <div class="container">
+            <div class="level-icon-large">🐍</div>
+            <h1>المستوى الثالث | Level 3</h1>
+            <h2 style="margin-top: 1rem; font-size: 2rem;">المرحلة الإعدادية (1 - 2 - 3)</h2>
+            <p style="font-size: 1.25rem; margin-top: 1rem; opacity: 0.95;">
+                محاكي الحضارة المصرية | Egyptian Civilization Simulator
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="card" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+                <h2>عن هذا المستوى | About This Level</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8;">
+                    مشاريع برمجية متقدمة باستخدام Python أو لغات برمجة نصية أخرى. يجب أن يكون المشروع برنامجاً يحاكي
+                    جانباً من الحضارة المصرية القديمة بطريقة تقنية متطورة.
+                </p>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 1rem;">
+                    Advanced programming projects using Python or other text-based languages. The project should be a
+                    program that simulates an aspect of Ancient Egyptian civilization in an advanced technical way.
+                </p>
+            </div>
+
+            <h2 class="section-title">الخيارات المتاحة | Available Options</h2>
+
+            <div class="options-grid">
+                <div class="option-card option-recommended">
+                    <span class="recommended-badge">🌟 الأساسي | Primary</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">🐍</div>
+                    <h3>Python</h3>
+                    <p>اللغة الأساسية للمسابقة</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">Primary competition language</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>مناسب:</strong> جميع الصفوف الإعدادية</small><br>
+                        <small style="color: var(--color-primary);">✅ الخيار المفضل والموصى به</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-warning);">⚡ بديل</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">📜</div>
+                    <h3>JavaScript</h3>
+                    <p>للويب والتطبيقات</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">For web & applications</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>الشرط:</strong> موافقة معلم التكنولوجيا</small><br>
+                        <small style="color: var(--color-warning);">يجب أن تجيده جيداً</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-info);">☕ بديل</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">☕</div>
+                    <h3>Java / C++</h3>
+                    <p>للطلاب المتقدمين جداً</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">For very advanced students</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small><strong>الشرط:</strong> موافقة معلم التكنولوجيا</small><br>
+                        <small style="color: var(--color-info);">للخبراء فقط</small>
+                    </div>
+                </div>
+
+                <div class="option-card">
+                    <span class="recommended-badge" style="background: var(--color-success);">✨ بديل</span>
+                    <div style="font-size: 3rem; margin: 1rem 0;">💬</div>
+                    <h3>أي لغة نصية</h3>
+                    <h4>Any Text Language</h4>
+                    <p>بموافقة المعلم</p>
+                    <p style="color: var(--color-gray-600); font-size: 0.875rem;">With teacher approval</p>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-gray-200);">
+                        <small style="color: var(--color-warning);">يجب الموافقة المسبقة</small>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">المتطلبات التقنية | Technical Requirements</h2>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <div class="card">
+                        <h3>يجب أن يتضمن برنامجك | Your Program Must Include:</h3>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>5 دوال على الأقل (Functions)</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">At least 5
+                                    functions</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>استخدام هياكل البيانات</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Use data
+                                    structures (lists/dictionaries)</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>معالجة الأخطاء (Error Handling)</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Error handling
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>تعليقات شاملة بالعربي/الإنجليزي</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Comprehensive
+                                    comments in AR/EN</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>واجهة مستخدم واضحة</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">Clear user
+                                    interface</p>
+                            </div>
+                        </div>
+
+                        <div class="requirement-check">
+                            <span class="check-icon">✅</span>
+                            <div>
+                                <strong>3 عناصر مصرية مدمجة</strong>
+                                <p style="margin: 0; font-size: 0.875rem; color: var(--color-gray-600);">3 integrated
+                                    Egyptian elements</p>
+                            </div>
+                        </div>
+
+                        <div class="advanced-note">
+                            <strong>💡 نصائح للتميز:</strong>
+                            <ul style="margin: 0.5rem 0 0 1.5rem;">
+                                <li>كود منظم ومعياري (Modular Code)</li>
+                                <li>استخدام OOP إن أمكن</li>
+                                <li>ملف README مع التعليمات</li>
+                                <li>اختبار شامل للبرنامج</li>
+                                <li>معالجة حالات خاصة (Edge Cases)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title">أفكار للمشاريع | Project Ideas</h2>
+
+                <div class="ideas-list">
+                    <div class="idea-card">
+                        <h4>🔤 محول هيروغليفي متقدم</h4>
+                        <p>برنامج يحول النصوص للهيروغليفية والعكس</p>
+                        <small style="color: var(--color-gray-600);">Advanced hieroglyphic converter</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🏛️ نظام إدارة متحف</h4>
+                        <p>نظام لإدارة القطع الأثرية في متحف</p>
+                        <small style="color: var(--color-gray-600);">Museum management system</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🏗️ محاكي بناء الأهرامات</h4>
+                        <p>برنامج يحسب الموارد اللازمة لبناء هرم</p>
+                        <small style="color: var(--color-gray-600);">Pyramid building simulator with
+                            calculations</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>📚 مكتبة تاريخ مصر</h4>
+                        <p>قاعدة بيانات للأحداث التاريخية المصرية</p>
+                        <small style="color: var(--color-gray-600);">Egyptian history database</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>🎮 لعبة نصية تاريخية</h4>
+                        <p>لعبة مغامرات نصية في مصر القديمة</p>
+                        <small style="color: var(--color-gray-600);">Text-based historical adventure game</small>
+                    </div>
+
+                    <div class="idea-card">
+                        <h4>📊 محلل بيانات الحضارة</h4>
+                        <p>برنامج إحصائي عن الحضارة المصرية</p>
+                        <small style="color: var(--color-gray-600);">Statistical analyzer for Egyptian
+                            civilization</small>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="card"
+                        style="background: linear-gradient(135deg, #FFF3CD 0%, #FFFFFF 100%); border: 2px solid #FFA500;">
+                        <h3>📅 المواعيد المهمة</h3>
+                        <div style="margin-top: 1rem;">
+                            <p><strong>البداية:</strong> 4 ديسمبر 2025</p>
+                            <p><strong>الموعد النهائي:</strong> 18 ديسمبر 2025</p>
+                            <p><strong>النتائج:</strong> 24 ديسمبر 2025</p>
+                            <p><strong>الحفل:</strong> 30 ديسمبر 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="card"
+                        style="background: linear-gradient(135deg, #E0F2FE 0%, #FFFFFF 100%); border: 2px solid #3B82F6;">
+                        <h3>📝 كيفية التقديم</h3>
+                        <ol style="margin: 1rem 0 0 1.5rem;">
+                            <li>اكتب الكود ونظّمه</li>
+                            <li>أضف تعليقات شاملة</li>
+                            <li>اكتب ملف README</li>
+                            <li>اختبر البرنامج كاملاً</li>
+                            <li>سلّم لمعلم التكنولوجيا</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 4rem; padding: 3rem; background: var(--color-gray-100); border-radius: 1rem; text-align: center;">
+                <h2>📚 المواد المساعدة | Helpful Materials</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="../downloads/student-guide.html" class="btn btn-primary">📘 دليل الطالب</a>
+                    <a href="../downloads/judging-rubric.html" class="btn btn-outline">📊 معايير التقييم</a>
+                    <a href="../competition.html#contact" class="btn btn-secondary-plus">💬 اتصل بنا</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>مدرسة الحرية | Al Horya School</h3>
+                    <p>قسم التكنولوجيا | Technology Department</p>
+                </div>
+                <div>
+                    <h3>تواصل معنا | Contact</h3>
+                    <p>📱 <a href="https://wa.me/201507108558" style="color: var(--color-gray-300);">+201507108558</a>
+                    </p>
+                    <p>📘 <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                            style="color: var(--color-gray-300);">Learnify Group</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2025 - مدرسة الحرية</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                    🎓 <strong>Powered by <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                            style="color: var(--color-primary);">Learnify Academy</a></strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/competition.js"></script>
+</body>
+
+</html>

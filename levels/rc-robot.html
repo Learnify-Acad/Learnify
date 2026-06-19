@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسار الروبوت | RC Robot Track - Al Horya Competition</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/competition.css">
+
+    <style>
+        body {
+            background: var(--color-gray-50);
+        }
+
+        .level-header {
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .level-content {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .hardware-card {
+            background: var(--color-gray-50);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #EF4444;
+        }
+
+        html[dir="rtl"] .hardware-card {
+            border-left: none;
+            border-right: 4px solid #EF4444;
+        }
+
+        .component-number {
+            background: #EF4444;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../competition.html" class="logo">
+                    <img src="../al_horya_school.jpg" alt="Al Horya School" class="logo-img">
+                    <div class="logo-text">
+                        <h1>مسابقة التكنولوجيا</h1>
+                        <p>Technology Competition</p>
+                    </div>
+                </a>
+
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="../competition.html">الرئيسية</a></li>
+                        <li><a href="../levels/level1.html">المستوى 1</a></li>
+                        <li><a href="../levels/level2.html">المستوى 2</a></li>
+                        <li><a href="../levels/level3.html">المستوى 3</a></li>
+                        <li><a href="rc-robot.html" class="active">مسار الروبوت</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="level-header">
+        <div class="container">
+            <h1>🤖 مسار الروبوت | RC Robot Track</h1>
+            <p style="font-size: 1.25rem; margin-top: 1rem;">تحكم عن بُعد باستخدام البلوتوث</p>
+            <p style="font-size: 1rem; opacity: 0.9;">Bluetooth Remote Control Robot</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="level-content">
+
+            <div
+                style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(220, 38, 38, 0.05)); padding: 2rem; border-radius: 1rem; margin-bottom: 2rem;">
+                <h2>🎯 نظرة عامة | Overview</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8;">
+                    <strong>RC Robot</strong> هو روبوت يمكن التحكم فيه عن طريق البلوتوث باستخدام برامج التحكم المختلفة.
+                </p>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 1rem;">
+                    <strong>RC Robot</strong> is a Bluetooth-controlled robot using various control apps.
+                </p>
+            </div>
+
+            <h2
+                style="color: #EF4444; margin: 3rem 0 1.5rem; border-bottom: 3px solid #EF4444; padding-bottom: 0.5rem;">
+                ✅ مكونات الروبوت (Hardware Components)
+            </h2>
+
+            <div class="hardware-grid">
+                <!-- Component 1 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">1</span> وحدة التحكم | Controller</h3>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li>✔️ <strong>Arduino UNO</strong></li>
+                        <li>أو</li>
+                        <li>✔️ <strong>Arduino Nano</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Component 2 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">2</span> درايفر الموتور | Motor Driver</h3>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li>✔️ <strong>L293D Motor Driver Shield</strong></li>
+                        <li style="margin: 0.5rem 0;">أو</li>
+                        <li>✔️ <strong>L298 Motor Driver</strong></li>
+                    </ul>
+                    <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-gray-600);">
+                        مسؤول عن تشغيل الموتورات يمين/يسار وقدّام/وراء
+                    </p>
+                </div>
+
+                <!-- Component 3 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">3</span> الموتورات | Motors</h3>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li>✔️ <strong>2x DC Gear Motors</strong></li>
+                        <li style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--color-gray-600);">
+                            (العجلات الخلفية)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Component 4 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">4</span> العجلة الحرة | Caster Wheel</h3>
+                    <p style="margin-top: 1rem;">
+                        عجلة صغيرة في الأمام أو الخلف لتوازن الروبوت
+                    </p>
+                    <p style="margin-top: 0.5rem; padding: 0.5rem; background: white; border-radius: 0.25rem;">
+                        <strong>أو</strong> استخدام الدفع الرباعي:
+                    </p>
+                    <p style="margin-top: 0.5rem;">✔️ <strong>4x DC Gear Motors</strong></p>
+                </div>
+
+                <!-- Component 5 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">5</span> البطارية | Battery</h3>
+                    <p style="margin-top: 1rem;">
+                        <strong>جهد التشغيل:</strong>
+                    </p>
+                    <p style="font-size: 1.25rem; color: #EF4444; font-weight: bold; margin: 0.5rem 0;">
+                        9V – 12V
+                    </p>
+                    <p style="font-size: 0.875rem; color: var(--color-gray-600);">
+                        اختيارات مناسبة للروبوت
+                    </p>
+                </div>
+
+                <!-- Component 6 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">6</span> وحدة البلوتوث | Bluetooth Module</h3>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li>✔️ <strong>HC-05</strong></li>
+                        <li style="margin: 0.5rem 0;">أو</li>
+                        <li>✔️ <strong>HC-06</strong></li>
+                    </ul>
+                    <p
+                        style="margin-top: 0.5rem; padding: 0.75rem; background: white; border-radius: 0.25rem; font-size: 0.875rem;">
+                        📱 للتحكم بالروبوت عبر <strong>Bluetooth RC App</strong>
+                    </p>
+                </div>
+
+                <!-- Component 7 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">7</span> الشاسيه | Chassis</h3>
+                    <p style="margin-top: 1rem;">
+                        <strong>المادة:</strong>
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-top: 0.5rem;">
+                        <li>✔️ أكريليك طبقتين</li>
+                        <li>✔️ أو خشب</li>
+                    </ul>
+                    <p
+                        style="margin-top: 1rem; padding: 0.75rem; background: #EF4444; color: white; border-radius: 0.25rem; text-align: center; font-weight: bold;">
+                        📏 الحجم المناسب: 20×15 سم
+                    </p>
+                </div>
+
+                <!-- Component 8 -->
+                <div class="hardware-card">
+                    <h3><span class="component-number">8</span> مكونات إضافية | Additional Parts</h3>
+                    <ul style="margin-top: 1rem; list-style: none; padding: 0;">
+                        <li>✔️ أسلاك توصيل | Wires</li>
+                        <li>✔️ مفكات | Screwdrivers</li>
+                        <li>✔️ هولدر بطارية | Battery Holder</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                style="background: var(--color-gold-light); padding: 2rem; border-radius: 1rem; margin: 3rem 0; border-right: 4px solid var(--color-gold);">
+                <h2>🎓 المتطلبات | Requirements</h2>
+                <ul style="font-size: 1.125rem; line-height: 2;">
+                    <li>✅ تجميع الروبوت باستخدام المكونات المذكورة</li>
+                    <li>✅ برمجة Arduino للتحكم بالموتورات</li>
+                    <li>✅ ربط وحدة البلوتوث بشكل صحيح</li>
+                    <li>✅ اختبار الروبوت والتأكد من عمل جميع الاتجاهات</li>
+                    <li>✅ تطبيق التحكم عبر الموبايل يعمل بشكل سليم</li>
+                </ul>
+            </div>
+
+            <div style="background: var(--color-gray-50); padding: 2rem; border-radius: 1rem; margin: 3rem 0;">
+                <h2>⚙️ التطبيقات المقترحة | Suggested Apps</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                        <strong>📱 Bluetooth RC Controller</strong>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600);">Android/iOS</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                        <strong>📱 Arduino Bluetooth Control</strong>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600);">Android</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 0.5rem; text-align: center;">
+                        <strong>📱 BT Controller</strong>
+                        <p style="font-size: 0.875rem; color: var(--color-gray-600);">Custom Control</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(239, 68, 68, 0.1); padding: 2rem; border-radius: 1rem; margin: 3rem 0;">
+                <h2>🏆 معايير التقييم | Judging Criteria</h2>
+                <table style="width: 100%; border-collapse: collapse; margin-top: 1rem;">
+                    <tr style="background: var(--color-gray-100);">
+                        <th style="padding: 1rem; text-align: right;">المعيار</th>
+                        <th style="padding: 1rem; text-align: center;">النقاط</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200);">جودة التجميع والتركيب
+                        </td>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200); text-align: center;">
+                            <strong>30</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200);">البرمجة والكود</td>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200); text-align: center;">
+                            <strong>30</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200);">الأداء والتحكم</td>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200); text-align: center;">
+                            <strong>25</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200);">الإبداع والتصميم</td>
+                        <td style="padding: 1rem; border-top: 1px solid var(--color-gray-200); text-align: center;">
+                            <strong>15</strong></td>
+                    </tr>
+                    <tr style="font-weight: bold; background: var(--color-gray-50);">
+                        <td style="padding: 1rem; border-top: 2px solid var(--color-gray-300);">المجموع</td>
+                        <td
+                            style="padding: 1rem; border-top: 2px solid var(--color-gray-300); text-align: center; color: #EF4444;">
+                            <strong>100</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div
+                style="margin-top: 4rem; padding: 3rem; background: var(--color-gray-100); border-radius: 1rem; text-align: center;">
+                <h2>📚 المواد المساعدة | Helpful Materials</h2>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="../downloads/student-guide.html" class="btn btn-primary">
+                        📘 دليل الطالب | Student Guide
+                    </a>
+                    <a href="../downloads/judging-rubric.html" class="btn btn-outline">
+                        📊 معايير التقييم | Rubric
+                    </a>
+                    <a href="../competition.html#contact" class="btn btn-secondary-plus">
+                        💬 اتصل بنا | Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../competition.html" class="btn btn-primary">← العودة للرئيسية | Back to Home</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2026 - مدرسة الحرية</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                    🎓 <strong>Powered by <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                            style="color: var(--color-primary);">Learnify Academy</a></strong>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/competition.js"></script>
+</body>
+
+</html>

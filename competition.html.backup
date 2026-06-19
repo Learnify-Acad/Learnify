@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="مسابقة التكنولوجيا المدرسية - مدرسة الحرية | من الماضي نبني المستقبل | Al Horya School Technology Competition">
+    <meta name="keywords"
+        content="مسابقة, تكنولوجيا, برمجة, Scratch, Python, مدرسة الحرية, competition, technology, programming">
+    <meta name="author" content="Al Horya School - Technology Department">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="مسابقة التكنولوجيا المدرسية - مدرسة الحرية">
+    <meta property="og:description" content="رحلة مبتكرة تربط بين التراث المصري العريق والتكنولوجيا الحديثة">
+
+    <title>مسابقة التكنولوجيا | Al Horya School Technology Competition</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Google Fonts for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/competition.css">
+</head>
+
+<body>
+
+    <!-- ========= HEADER ========= -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="al_horya_school.jpg" alt="Al Horya School Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1 data-i18n="hero.title">مسابقة التكنولوجيا المدرسية</h1>
+                        <p data-i18n="hero.subtitle">من الماضي نبني المستقبل</p>
+                    </div>
+                </a>
+
+                <!-- Navigation -->
+                <nav class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
+                        <li><a href="#about" data-i18n="nav.about">عن المسابقة</a></li>
+                        <li><a href="#categories" data-i18n="nav.categories">الفئات</a></li>
+                        <li><a href="#timeline" data-i18n="nav.timeline">الجدول الزمني</a></li>
+                        <li><a href="#rules" data-i18n="nav.rules">القواعد</a></li>
+                        <li><a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">التواصل</a></li>
+                    </ul>
+
+                    <!-- Language Switcher -->
+                    <div class="lang-switcher">
+                        <button data-lang="ar" class="active">ع</button>
+                        <button data-lang="en">EN</button>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========= HERO SECTION ========= -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content animate-on-scroll">
+                <h1 data-i18n="hero.title">مسابقة التكنولوجيا المدرسية</h1>
+                <p class="subtitle text-gradient" data-i18n="hero.subtitle">من الماضي نبني المستقبل</p>
+                <p class="description" data-i18n="hero.description">رحلة مبتكرة تربط بين التراث المصري العريق
+                    والتكنولوجيا الحديثة</p>
+
+                <div class="dates" data-i18n="hero.dates">١ - ٣٠ يناير ٢٠٢٦</div>
+
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-primary">
+                        <span data-i18n="buttons.register">سجل الآن</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span data-i18n="buttons.learnMore">اعرف المزيد</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= ABOUT SECTION ========= -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">عن المسابقة</h2>
+
+            <div class="animate-on-scroll">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h3 data-i18n="about.heading">ما هي مسابقة التكنولوجيا؟</h3>
+                    <p data-i18n="about.description" style="font-size: 1.125rem; line-height: 1.8;">
+                        مسابقة تكنولوجية شاملة تستهدف جميع طلاب مدرسة الحرية من الصف الأول حتى المرحلة الإعدادية. نربط
+                        التراث المصري القديم بالتكنولوجيا الحديثة، ونشجع الطلاب على استخدام مهاراتهم التقنية لإعادة تخيل
+                        حضارتنا العظيمة بطرق مبتكرة.
+                    </p>
+                </div>
+
+                <!-- Goals -->
+                <div style="margin-top: 3rem;">
+                    <h3 class="text-center" data-i18n="about.goals.title">أهداف المسابقة</h3>
+                    <ul data-i18n-list="about.goals.items"
+                        style="max-width: 600px; margin: 2rem auto; list-style: none;">
+                        <!-- Dynamically populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <!-- Stats -->
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="card text-center">
+                        <div class="card-icon" style="margin: 0 auto;">👥</div>
+                        <h4 data-i18n="about.stats.students">جميع الطلاب</h4>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-icon" style="margin: 0 auto;">🎯</div>
+                        <h4 data-i18n="about.stats.levels">٣ مستويات</h4>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-icon" style="margin: 0 auto;">📅</div>
+                        <h4 data-i18n="about.stats.weeks">٤ أسابيع</h4>
+                    </div>
+                    <div class="card text-center">
+                        <div class="card-icon" style="margin: 0 auto;">🏆</div>
+                        <h4 data-i18n="about.stats.prizes">جوائز قيمة</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= CATEGORIES SECTION ========= -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <h2 class="section-title" data-i18n="categories.title">فئات المسابقة</h2>
+
+            <div class="categories-grid">
+                <!-- Level 1: Grades 1-2 -->
+                <div class="card category-card animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <img src="images/level1-icon.png" alt="Grades 1-2"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%234F46E5%22/%3E%3Ctext x=%2250%22 y=%2255%22 text-anchor=%22middle%22 font-size=%2230%22 fill=%22white%22%3E🎨%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <span class="category-badge" data-i18n="categories.level1.name">المستوى الأول</span>
+                        <h3 data-i18n="categories.level1.grades">الصفوف 1-3</h3>
+                    </div>
+
+                    <p data-i18n="categories.level1.description">رحلة الفرعون - مشاريع إبداعية باستخدام الرسم والتلوين
+                        والأنشطة التفاعلية</p>
+
+                    <div class="skills-list">
+                        <span class="skill-tag">الإبداع</span>
+                        <span class="skill-tag">المنطق</span>
+                        <span class="skill-tag">العمل اليدوي</span>
+                        <span class="skill-tag">التفكير البصري</span>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
+                        <p><strong data-i18n="categories.level1.task">المهمة:</strong> <span
+                                data-i18n="categories.level1.task">إنشاء مشروع فني يصور رحلة في مصر القديمة</span></p>
+                        <p><strong>⏱️</strong> <span data-i18n="categories.level1.time">أسبوعان</span></p>
+                        <a href="levels/level1.html" class="btn btn-outline" style="margin-top: 1rem; width: 100%;">
+                            <span data-i18n="categories.viewDetails">عرض التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Level 2: Grades 3-5 -->
+                <div class="card category-card animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <img src="images/level2-icon.png" alt="Grades 3-5"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%239333EA%22/%3E%3Ctext x=%2250%22 y=%2255%22 text-anchor=%22middle%22 font-size=%2230%22 fill=%22white%22%3E💻%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <span class="category-badge" data-i18n="categories.level2.name">المستوى الثاني</span>
+                        <h3 data-i18n="categories.level2.grades">الصفوف 4-6</h3>
+                    </div>
+
+                    <p data-i18n="categories.level2.description">أسرار الأهرامات التفاعلية - Scratch أو Python (حسب
+                        المستوى)</p>
+
+                    <div class="skills-list">
+                        <span class="skill-tag">برمجة Scratch</span>
+                        <span class="skill-tag">التصميم</span>
+                        <span class="skill-tag">المنطق البرمجي</span>
+                        <span class="skill-tag">الإبداع</span>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
+                        <p><strong>🎮</strong> <span data-i18n="categories.level2.task">بناء لعبة أو قصة تفاعلية عن مصر
+                                القديمة</span></p>
+                        <p><strong>⏱️</strong> <span data-i18n="categories.level2.time">أسبوعان</span></p>
+                        <a href="docs/competition-plan.md#level2" class="btn btn-outline"
+                            style="margin-top: 1rem; width: 100%;">
+                            <span data-i18n="categories.viewDetails">عرض التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Level 3: Preparatory -->
+                <div class="card category-card animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <img src="images/level3-icon.png" alt="Preparatory"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23D4AF37%22/%3E%3Ctext x=%2250%22 y=%2255%22 text-anchor=%22middle%22 font-size=%2230%22 fill=%22white%22%3E🐍%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <span class="category-badge" data-i18n="categories.level3.name">المستوى الثالث</span>
+                        <h3 data-i18n="categories.level3.grades">المرحلة الإعدادية (١-٣)</h3>
+                    </div>
+
+                    <p data-i18n="categories.level3.description">محاكي الحضارة المصرية - برنامج Python يحاكي جانب من
+                        الحضارة المصرية</p>
+
+                    <div class="skills-list">
+                        <span class="skill-tag">برمجة Python</span>
+                        <span class="skill-tag">الخوارزميات</span>
+                        <span class="skill-tag">البنية البرمجية</span>
+                        <span class="skill-tag">حل المشكلات</span>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-gray-200);">
+                        <p><strong>⚙️</strong> <span data-i18n="categories.level3.task">كتابة برنامج يحاكي أحد جوانب
+                                الحضارة المصرية</span></p>
+                        <p><strong>⏱️</strong> <span data-i18n="categories.level3.time">أسبوعان</span></p>
+                        <a href="docs/competition-plan.md#level3" class="btn btn-outline"
+                            style="margin-top: 1rem; width: 100%;">
+                            <span data-i18n="categories.viewDetails">عرض التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= TIMELINE SECTION ========= -->
+    <section class="section timeline" id="timeline">
+        <div class="container">
+            <h2 class="section-title" data-i18n="timeline.title">الجدول الزمني</h2>
+
+            <div class="timeline-grid">
+                <!-- Week 1 -->
+                <div class="card timeline-item animate-on-scroll">
+                    <div class="timeline-number">1</div>
+                    <h3 data-i18n="timeline.week1.title">الأسبوع الأول</h3>
+                    <p class="timeline-dates" data-i18n="timeline.week1.dates">٤-١٠ ديسمبر</p>
+                    <ul class="timeline-events">
+                        <li data-i18n="timeline.week1.events.0">الإعلان الرسمي للمسابقة</li>
+                        <li data-i18n="timeline.week1.events.1">توزيع الإرشادات والمواد</li>
+                        <li data-i18n="timeline.week1.events.2">جلسات توضيحية في الفصول</li>
+                        <li data-i18n="timeline.week1.events.3">بدء العمل على المشاريع</li>
+                    </ul>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="card timeline-item animate-on-scroll">
+                    <div class="timeline-number">2</div>
+                    <h3 data-i18n="timeline.week2.title">الأسبوع الثاني</h3>
+                    <p class="timeline-dates" data-i18n="timeline.week2.dates">١١-١٧ ديسمبر</p>
+                    <ul class="timeline-events">
+                        <li data-i18n="timeline.week2.events.0">مواصلة العمل على المشاريع</li>
+                        <li data-i18n="timeline.week2.events.1">دعم وتوجيه من المعلمين</li>
+                        <li data-i18n="timeline.week2.events.2">الموعد النهائي للتقديم (١٨ ديسمبر)</li>
+                        <li data-i18n="timeline.week2.events.3">جمع المشاريع بواسطة المعلمين</li>
+                    </ul>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="card timeline-item animate-on-scroll">
+                    <div class="timeline-number">3</div>
+                    <h3 data-i18n="timeline.week3.title">الأسبوع الثالث</h3>
+                    <p class="timeline-dates" data-i18n="timeline.week3.dates">١٨-٢٤ ديسمبر</p>
+                    <ul class="timeline-events">
+                        <li data-i18n="timeline.week3.events.0">التصفية الابتدائية (قسم التكنولوجيا)</li>
+                        <li data-i18n="timeline.week3.events.1">اختيار أفضل ٣ مشاريع لكل فصل</li>
+                        <li data-i18n="timeline.week3.events.2">إعلان المشاريع المتأهلة</li>
+                        <li data-i18n="timeline.week3.events.3">التحضير للعروض التقديمية</li>
+                    </ul>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="card timeline-item animate-on-scroll">
+                    <div class="timeline-number">4</div>
+                    <h3 data-i18n="timeline.week4.title">الأسبوع الرابع</h3>
+                    <p class="timeline-dates" data-i18n="timeline.week4.dates">٢٥-٣١ ديسمبر</p>
+                    <ul class="timeline-events">
+                        <li data-i18n="timeline.week4.events.0">يوم العرض النهائي (٢٩ ديسمبر)</li>
+                        <li data-i18n="timeline.week4.events.1">حفل النتائج والجوائز (٣٠ ديسمبر)</li>
+                        <li data-i18n="timeline.week4.events.2">نشر الصور والنتائج</li>
+                        <li data-i18n="timeline.week4.events.3">الاحتفال بالفائزين</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= RULES & SCORING SECTION ========= -->
+    <section class="section rules" id="rules">
+        <div class="container">
+            <h2 class="section-title" data-i18n="rules.title">القواعد ومعايير التقييم</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <!-- General Rules -->
+                <div class="card animate-on-scroll">
+                    <h3 data-i18n="rules.general.title">القواعد العامة</h3>
+                    <ul data-i18n-list="rules.general.items" style="list-style: none;">
+                        <!-- Dynamically populated by JavaScript -->
+                    </ul>
+                </div>
+
+                <!-- Scoring Criteria -->
+                <div class="card animate-on-scroll">
+                    <h3 data-i18n="rules.scoring.title">معايير التقييم</h3>
+                    <ul style="list-style: none;">
+                        <li
+                            style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-gray-200);">
+                            <span data-i18n="rules.scoring.creativity">الإبداع والابتكار</span>
+                            <strong>25-30</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-gray-200);">
+                            <span data-i18n="rules.scoring.technical">الصحة التقنية</span>
+                            <strong>25-30</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-gray-200);">
+                            <span data-i18n="rules.scoring.theme">الربط بالموضوع</span>
+                            <strong>15-25</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-gray-200);">
+                            <span data-i18n="rules.scoring.presentation">العرض التقديمي</span>
+                            <strong>10-15</strong>
+                        </li>
+                        <li
+                            style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-weight: 600; color: var(--color-primary);">
+                            <span data-i18n="rules.scoring.total">المجموع</span>
+                            <strong>100</strong>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Awards -->
+                <div class="card animate-on-scroll">
+                    <h3 data-i18n="rules.awards.title">الجوائز</h3>
+                    <div style="margin-top: 1rem;">
+                        <div
+                            style="padding: 1rem; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); border-radius: 0.5rem; margin-bottom: 0.75rem; color: white;">
+                            🏆 <strong>المركز الأول</strong><br>
+                            <small>كأس ذهبي + شهادة + جائزة قيمة</small>
+                        </div>
+                        <div
+                            style="padding: 1rem; background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%); border-radius: 0.5rem; margin-bottom: 0.75rem; color: white;">
+                            🥈 <strong>المركز الثاني</strong><br>
+                            <small>كأس فضي + شهادة + جائزة</small>
+                        </div>
+                        <div
+                            style="padding: 1rem; background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%); border-radius: 0.5rem; margin-bottom: 0.75rem; color: white;">
+                            🥉 <strong>المركز الثالث</strong><br>
+                            <small>كأس برونزي + شهادة + جائزة</small>
+                        </div>
+                        <div
+                            style="padding: 0.75rem; background: var(--color-gray-100); border-radius: 0.5rem; font-size: 0.875rem;">
+                            ⭐ جوائز خاصة + شهادات مشاركة
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= FAQ SECTION ========= -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title">الأسئلة الشائعة</h2>
+
+            <div class="faq-list" id="faq-list">
+                <!-- Dynamically populated by JavaScript from translations -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========= DOWNLOADS SECTION ========= -->
+    <section class="section" style="background: var(--color-gray-100);">
+        <div class="container">
+            <h2 class="section-title" data-i18n="downloads.title">المواد التعليمية</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div class="card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📘</div>
+                    <h4 data-i18n="downloads.studentGuide">دليل الطالب</h4>
+                    <button class="btn btn-outline" style="margin-top: 1rem;"
+                        onclick="competitionApp.downloadFile('student-guide.pdf')">
+                        <span data-i18n="buttons.download">تحميل</span>
+                    </button>
+                </div>
+
+                <div class="card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📗</div>
+                    <h4 data-i18n="downloads.teacherGuide">دليل المعلم</h4>
+                    <button class="btn btn-outline" style="margin-top: 1rem;"
+                        onclick="competitionApp.downloadFile('teacher-guide.pdf')">
+                        <span data-i18n="buttons.download">تحميل</span>
+                    </button>
+                </div>
+
+                <div class="card animate-on-scroll" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+                    <h4 data-i18n="downloads.rubric">معايير التقييم</h4>
+                    <button class="btn btn-outline" style="margin-top: 1rem;"
+                        onclick="competitionApp.downloadFile('judging-rubric.pdf')">
+                        <span data-i18n="buttons.download">تحميل</span>
+                    </button>
+
+                    <!-- ========= CONTACT SECTION ========= -->
+                    <section class="section contact" id="contact">
+                        <div class="container">
+                            <h2 class="section-title" data-i18n="contact.title">تواصل معنا</h2>
+
+                            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                                <p data-i18n="contact.description" style="font-size: 1.125rem; margin-bottom: 2rem;">هل
+                                    لديك أسئلة? نحن
+                                    هنا للمساعدة!</p>
+
+                                <div class="card">
+                                    <div style="display: grid; gap: 1.5rem; text-align: right;">
+                                        <div>
+                                            <strong>📧 <span data-i18n="contact.email">البريد
+                                                    الإلكتروني</span>:</strong><br>
+                                            <a href="mailto:competition@alhorya.edu.eg"
+                                                style="color: var(--color-primary);">competition@alhorya.edu.eg</a>
+                                        </div>
+
+                                        <div>
+                                            <strong>📱 <span
+                                                    data-i18n="contact.phone">الهاتف/واتساب</span>:</strong><br>
+                                            <a href="https://wa.me/201507108558"
+                                                style="color: var(--color-primary);">+201507108558</a>
+                                        </div>
+
+                                        <div>
+                                            <strong>🕐 <span data-i18n="contact.hours">ساعات الدعم</span>:</strong><br>
+                                            <span data-i18n="contact.hoursValue">الأحد-الخميس: ٩ صباحاً - ٢ مساءً</span>
+                                        </div>
+
+                                        <div>
+                                            <strong>📍 <span data-i18n="contact.location">الموقع</span>:</strong><br>
+                                            مدرسة الحرية - قسم التكنولوجيا
+                                        </div>
+
+                                        <div>
+                                            <strong>📘 Facebook</strong><br>
+                                            <a href="https://www.facebook.com/learnifygroup" target="_blank"
+                                                style="color: var(--color-primary);">Learnify Group</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ========= FOOTER ========= -->
+                    <footer class="footer">
+                        <div class="container">
+                            <div class="footer-content">
+                                <div>
+                                    <h3 data-i18n="footer.school">مدرسة الحرية</h3>
+                                    <p data-i18n="footer.techDept">قسم التكنولوجيا</p>
+                                    <p>مسابقة التكنولوجيا المدرسية ٢٠٢٥</p>
+                                </div>
+
+                                <div>
+                                    <h3>روابط سريعة</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="https://learnify-academy.alnwabnews.com/"
+                                                data-i18n="footer.links.about">عن
+                                                المدرسة</a></li>
+                                        <li><a href="https://learnify-academy.alnwabnews.com/courses"
+                                                data-i18n="footer.links.courses">المناهج</a></li>
+                                        <li><a href="#contact" data-i18n="footer.links.contact">اتصل بنا</a></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3>مصادر</h3>
+                                    <ul class="footer-links">
+                                        <li><a href="docs/competition-plan.md">الخطة الكاملة</a></li>
+                                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                                        <li><a href="#timeline">الجدول الزمني</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="footer-bottom">
+                                <p data-i18n="footer.rights">جميع الحقوق محفوظة © ٢٠٢٥ - مدرسة الحرية</p>
+                                <p style="margin-top: 0.5rem; font-size: 0.875rem;">
+                                    🎓 <strong>Powered by <a href="https://www.facebook.com/learnifygroup"
+                                            target="_blank" style="color: var(--color-primary);">Learnify
+                                            Academy</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <!-- Scripts -->
+                    <script src="scripts/translations.js"></script>
+                    <script src="scripts/competition.js"></script>
+</body>
+
+</html>
