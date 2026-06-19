@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Learnify Academy Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/competition.css">
+    <link rel="stylesheet" href="../styles/academy.css">
+</head>
+
+<body id="academy-portal">
+
+    <header class="header no-print">
+        <div class="container">
+            <div class="header-content">
+                <a href="portal.html" class="logo">
+                    <img src="../al_horya_school.jpg" alt="Learnify Academy" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Learnify Academy</h1>
+                        <p data-i18n-a="hero.tagline">من الماضي نبني المستقبل</p>
+                    </div>
+                </a>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#intro" data-i18n-a="nav.home">الرئيسية</a></li>
+                        <li><a href="#courses" data-i18n-a="nav.courses">الكورسات</a></li>
+                        <li><a href="#camps" data-i18n-a="nav.camps">الكامبات</a></li>
+                        <li><a href="#age-guide" data-i18n-a="nav.ageGuide">دليل العمر</a></li>
+                        <li><a href="#contact" data-i18n-a="nav.contact">تواصل</a></li>
+                    </ul>
+                    <div class="portal-nav-actions">
+                        <div class="lang-switcher">
+                            <button type="button" data-lang="ar" class="active">ع</button>
+                            <button type="button" data-lang="en">EN</button>
+                        </div>
+                        <button type="button" id="academy-logout" class="btn-logout" data-i18n-a="nav.logout">خروج</button>
+                    </div>
+                </nav>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="academy-hero" id="intro">
+        <div class="container">
+            <h1 data-i18n-a="hero.title">Learnify Academy — صيف 2026</h1>
+            <p class="subtitle" data-i18n-a="hero.subtitle">مكان طفلك يتعلم فيه بمرح</p>
+            <div class="academy-stats" style="max-width:700px;margin:1.5rem auto 0;">
+                <div class="academy-stat"><strong>8</strong><span data-i18n-a="stats.courses">كورسات</span></div>
+                <div class="academy-stat"><strong>6</strong><span data-i18n-a="stats.camps">كامبات</span></div>
+                <div class="academy-stat"><strong>6–18</strong><span data-i18n-a="stats.ages">سنة</span></div>
+                <div class="academy-stat"><strong>✓</strong><span data-i18n-a="stats.beginner">مبتدئ</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="academy-content">
+        <section class="academy-section">
+            <h2 data-i18n-a="intro.title">ليه Learnify Academy؟</h2>
+            <p data-i18n-a="intro.parent"></p>
+            <p data-i18n-a="intro.child" style="margin-top:1rem;"></p>
+            <div class="child-friendly-note" data-i18n-a="intro.note"></div>
+        </section>
+
+        <!-- COURSES -->
+        <section class="academy-section" id="courses">
+            <h2 data-i18n-a="courses.title">الكورسات الكاملة</h2>
+            <p data-i18n-a="courses.subtitle"></p>
+            <div class="catalog-grid">
+                <div class="catalog-card"><span class="code-badge">LF-SC</span><span class="start-badge">Start</span>
+                    <h3 data-i18n-a="courses.sc.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.sc.age"></span></div>
+                    <p data-i18n-a="courses.sc.desc"></p><p><small data-i18n-a="courses.sc.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.sc.price"></p>
+                    <p><em data-i18n-a="courses.sc.project"></em></p></div>
+                <div class="catalog-card featured"><span class="code-badge">LF-AI</span><span class="trend-badge">AI</span>
+                    <h3 data-i18n-a="courses.ai.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.ai.age"></span></div>
+                    <p data-i18n-a="courses.ai.desc"></p><p><small data-i18n-a="courses.ai.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.ai.price"></p>
+                    <p><em data-i18n-a="courses.ai.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-GD</span>
+                    <h3 data-i18n-a="courses.gd.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.gd.age"></span></div>
+                    <p data-i18n-a="courses.gd.desc"></p><p><small data-i18n-a="courses.gd.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.gd.price"></p>
+                    <p><em data-i18n-a="courses.gd.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-RB</span>
+                    <h3 data-i18n-a="courses.rb.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.rb.age"></span></div>
+                    <p data-i18n-a="courses.rb.desc"></p><p><small data-i18n-a="courses.rb.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.rb.price"></p>
+                    <p><em data-i18n-a="courses.rb.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-AP</span>
+                    <h3 data-i18n-a="courses.ap.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.ap.age"></span></div>
+                    <p data-i18n-a="courses.ap.desc"></p><p><small data-i18n-a="courses.ap.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.ap.price"></p>
+                    <p><em data-i18n-a="courses.ap.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-WB</span>
+                    <h3 data-i18n-a="courses.wb.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.wb.age"></span></div>
+                    <p data-i18n-a="courses.wb.desc"></p><p><small data-i18n-a="courses.wb.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.wb.price"></p>
+                    <p><em data-i18n-a="courses.wb.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-PY</span>
+                    <h3 data-i18n-a="courses.py.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.py.age"></span></div>
+                    <p data-i18n-a="courses.py.desc"></p><p><small data-i18n-a="courses.py.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.py.price"></p>
+                    <p><em data-i18n-a="courses.py.project"></em></p></div>
+                <div class="catalog-card"><span class="code-badge">LF-CY</span>
+                    <h3 data-i18n-a="courses.cy.name"></h3>
+                    <div class="meta-badges"><span class="age-pill" data-i18n-a="courses.cy.age"></span></div>
+                    <p data-i18n-a="courses.cy.desc"></p><p><small data-i18n-a="courses.cy.duration"></small></p>
+                    <p class="price-tag" data-i18n-a="courses.cy.price"></p>
+                    <p><em data-i18n-a="courses.cy.project"></em></p></div>
+            </div>
+        </section>
+
+        <!-- CAMPS -->
+        <section class="academy-section page-break" id="camps">
+            <h2 data-i18n-a="camps.title">كامبات الصيف</h2>
+            <p data-i18n-a="camps.subtitle"></p>
+            <p class="child-friendly-note" data-i18n-a="camps.specs"></p>
+            <div class="catalog-grid">
+                <div class="catalog-card featured"><span class="code-badge">CAMP-AI</span>
+                    <h3 data-i18n-a="camps.ai.name"></h3><span class="age-pill" data-i18n-a="camps.ai.age"></span>
+                    <p data-i18n-a="camps.ai.desc"></p><p class="price-tag" data-i18n-a="camps.ai.price"></p></div>
+                <div class="catalog-card"><span class="code-badge">CAMP-GJ</span><span class="start-badge">Start</span>
+                    <h3 data-i18n-a="camps.gj.name"></h3><span class="age-pill" data-i18n-a="camps.gj.age"></span>
+                    <p data-i18n-a="camps.gj.desc"></p><p class="price-tag" data-i18n-a="camps.gj.price"></p></div>
+                <div class="catalog-card"><span class="code-badge">CAMP-RB</span>
+                    <h3 data-i18n-a="camps.rb.name"></h3><span class="age-pill" data-i18n-a="camps.rb.age"></span>
+                    <p data-i18n-a="camps.rb.desc"></p><p class="price-tag" data-i18n-a="camps.rb.price"></p></div>
+                <div class="catalog-card"><span class="code-badge">CAMP-AP</span>
+                    <h3 data-i18n-a="camps.ap.name"></h3><span class="age-pill" data-i18n-a="camps.ap.age"></span>
+                    <p data-i18n-a="camps.ap.desc"></p><p class="price-tag" data-i18n-a="camps.ap.price"></p></div>
+                <div class="catalog-card"><span class="code-badge">CAMP-WB</span>
+                    <h3 data-i18n-a="camps.wb.name"></h3><span class="age-pill" data-i18n-a="camps.wb.age"></span>
+                    <p data-i18n-a="camps.wb.desc"></p><p class="price-tag" data-i18n-a="camps.wb.price"></p></div>
+                <div class="catalog-card"><span class="code-badge">CAMP-IN</span>
+                    <h3 data-i18n-a="camps.in.name"></h3><span class="age-pill" data-i18n-a="camps.in.age"></span>
+                    <p data-i18n-a="camps.in.desc"></p><p class="price-tag" data-i18n-a="camps.in.price"></p></div>
+            </div>
+            <div class="highlight-box" data-i18n-a="camps.demo"></div>
+        </section>
+
+        <!-- AGE GUIDE -->
+        <section class="academy-section" id="age-guide">
+            <h2 data-i18n-a="age.title">هل يناسب طفلي؟</h2>
+            <p data-i18n-a="age.subtitle"></p>
+            <table class="academy-table grade-matrix">
+                <thead>
+                    <tr>
+                        <th data-i18n-a="age.table.h1">الصف</th>
+                        <th data-i18n-a="age.table.h2">العمر</th>
+                        <th data-i18n-a="age.table.h3">ابدأ</th>
+                        <th data-i18n-a="age.table.h4">كورسات</th>
+                        <th data-i18n-a="age.table.h5">كامبات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="recommended">
+                        <td data-i18n-a="age.g12.grade"></td><td data-i18n-a="age.g12.age"></td>
+                        <td class="start-here" data-i18n-a="age.g12.start"></td>
+                        <td data-i18n-a="age.g12.courses"></td><td data-i18n-a="age.g12.camps"></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n-a="age.g34.grade"></td><td data-i18n-a="age.g34.age"></td>
+                        <td class="start-here" data-i18n-a="age.g34.start"></td>
+                        <td data-i18n-a="age.g34.courses"></td><td data-i18n-a="age.g34.camps"></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n-a="age.g56.grade"></td><td data-i18n-a="age.g56.age"></td>
+                        <td class="start-here" data-i18n-a="age.g56.start"></td>
+                        <td data-i18n-a="age.g56.courses"></td><td data-i18n-a="age.g56.camps"></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n-a="age.g78.grade"></td><td data-i18n-a="age.g78.age"></td>
+                        <td data-i18n-a="age.g78.start"></td>
+                        <td data-i18n-a="age.g78.courses"></td><td data-i18n-a="age.g78.camps"></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n-a="age.g9.grade"></td><td data-i18n-a="age.g9.age"></td>
+                        <td data-i18n-a="age.g9.start"></td>
+                        <td data-i18n-a="age.g9.courses"></td><td data-i18n-a="age.g9.camps"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="faq-item"><strong data-i18n-a="age.faq1q"></strong><p data-i18n-a="age.faq1a"></p></div>
+            <div class="faq-item"><strong data-i18n-a="age.faq2q"></strong><p data-i18n-a="age.faq2a"></p></div>
+            <div class="faq-item"><strong data-i18n-a="age.faq3q"></strong><p data-i18n-a="age.faq3a"></p></div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="academy-section">
+            <h2 data-i18n-a="pricing.title">أسعار مناسبة</h2>
+            <p data-i18n-a="pricing.note"></p>
+            <ul style="margin-top:1rem;line-height:2;">
+                <li data-i18n-a="pricing.campBundle"></li>
+                <li data-i18n-a="pricing.siblings"></li>
+            </ul>
+        </section>
+
+        <!-- CONTACT & PDF -->
+        <section class="academy-section" id="contact">
+            <h2 data-i18n-a="contact.title">تواصل معنا</h2>
+            <p><strong data-i18n-a="contact.whatsapp">واتساب:</strong>
+                <a id="contact-phone" href="https://wa.me/201038583382">01038583382</a></p>
+            <p data-i18n-a="contact.hours"></p>
+            <a id="whatsapp-cta" href="https://wa.me/201038583382" class="btn btn-primary no-print" style="margin:1rem 0;" data-i18n-a="contact.cta">واتساب</a>
+            <h3 style="margin-top:2rem;" data-i18n-a="contact.downloads">تحميل PDF</h3>
+            <div class="action-bar no-print">
+                <button type="button" class="btn btn-outline" onclick="window.print()" data-i18n-a="buttons.print">طباعة</button>
+                <button type="button" class="btn btn-outline" onclick="academyApp.downloadFile('academy-brochure.pdf')" data-i18n-a="buttons.downloadBrochure">بروشور</button>
+                <button type="button" class="btn btn-outline" onclick="academyApp.downloadFile('academy-courses-catalog.pdf')" data-i18n-a="buttons.downloadCourses">كورسات</button>
+                <button type="button" class="btn btn-outline" onclick="academyApp.downloadFile('academy-camps-catalog.pdf')" data-i18n-a="buttons.downloadCamps">كامبات</button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer no-print">
+        <div class="container" style="text-align:center;padding:2rem;">
+            <p><strong>Learnify Academy</strong> — <span data-i18n-a="hero.tagline"></span></p>
+            <p style="margin-top:0.5rem;"><a href="../competition.html" data-i18n-a="nav.competition">مسابقة المدرسة</a></p>
+        </div>
+    </footer>
+
+    <script src="../scripts/academy-translations.js"></script>
+    <script src="../scripts/academy-auth.js"></script>
+    <script src="../scripts/academy-portal.js"></script>
+</body>
+
+</html>
