@@ -2,51 +2,701 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Learnify Academy Brochure</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Learnify Academy Brochure 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/competition.css">
     <link rel="stylesheet" href="../styles/academy.css">
+    <style>
+        :root {
+            --brand-dark: #164646;
+            --brand: #1E5C5C;
+            --brand-light: #2D8B8B;
+            --gold: #D4AF37;
+            --gold-light: #FFFBF0;
+            --success-bg: #ECFDF5;
+            --success-border: #A7F3D0;
+            --info-bg: #EFF6FF;
+            --info-border: #BFDBFE;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .brochure-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        /* Cover */
+        .cover {
+            background: linear-gradient(135deg, #164646 0%, #1E5C5C 40%, #2D8B8B 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+        }
+
+        .cover img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.3);
+            margin-bottom: 1rem;
+        }
+
+        .cover h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+            font-weight: 800;
+        }
+
+        .cover p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0.3rem 0;
+        }
+
+        .cover .tagline {
+            font-size: 1.3rem;
+            color: #D4AF37;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .cover .price-banner {
+            display: inline-block;
+            background: #D4AF37;
+            color: #164646;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+
+        /* Section headers */
+        .section-header {
+            background: linear-gradient(90deg, #1E5C5C, #2D8B8B);
+            color: white;
+            padding: 1rem 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-header .icon {
+            font-size: 1.5rem;
+        }
+
+        .section-body {
+            padding: 1.5rem;
+        }
+
+        /* Cards */
+        .item-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            background: #FAFAFA;
+            transition: box-shadow 0.2s;
+            page-break-inside: avoid;
+        }
+
+        .item-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .item-card .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-card h3 {
+            color: #1E5C5C;
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .item-card .code {
+            background: #1E5C5C;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-family: monospace;
+        }
+
+        .item-card .meta {
+            font-size: 0.85rem;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-card .desc {
+            font-size: 0.9rem;
+            color: #374151;
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .item-card .learn {
+            background: #F0FDFA;
+            border: 1px solid #99F6E4;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #0F766E;
+            margin-bottom: 0.75rem;
+        }
+
+        .item-card .price {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1E5C5C;
+        }
+
+        .item-card .project {
+            font-size: 0.85rem;
+            color: #92400E;
+            font-style: italic;
+            margin-top: 0.5rem;
+            background: #FFFBF0;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Brief cards */
+        .brief-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .brief-box {
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .brief-box.student {
+            background: var(--success-bg);
+            border: 2px solid var(--success-border);
+        }
+
+        .brief-box.parent {
+            background: var(--info-bg);
+            border: 2px solid var(--info-border);
+        }
+
+        .brief-box .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .brief-box h3 {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .brief-box.student h3 {
+            color: #065F46;
+        }
+
+        .brief-box.parent h3 {
+            color: #1E40AF;
+        }
+
+        .brief-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 0;
+            text-align: start;
+            font-size: 0.85rem;
+        }
+
+        .brief-box ul li {
+            padding: 0.35rem 0;
+            border-bottom: 1px dashed #D1D5DB;
+        }
+
+        .brief-box ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Instructors */
+        .instructor-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .inst-card {
+            background: var(--gold-light);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+
+        .inst-card .avatar {
+            font-size: 2.5rem;
+        }
+
+        .inst-card h4 {
+            color: #1E5C5C;
+            margin: 0.5rem 0 0.2rem;
+            font-size: 1rem;
+        }
+
+        .inst-card .role {
+            font-weight: 700;
+            color: #B45309;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .inst-card .bio {
+            font-size: 0.8rem;
+            color: #4B5563;
+            line-height: 1.5;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: #164646;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section a {
+            color: #D4AF37;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .contact-section .footer-note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+
+        /* Page breaks */
+        .page-break {
+            page-break-before: always;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .brochure-wrap {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .item-card, .inst-card, .brief-box {
+                box-shadow: none !important;
+            }
+
+            .cover {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .section-header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .contact-section {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .item-card .learn {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .brief-row, .instructor-row {
+                grid-template-columns: 1fr;
+            }
+
+            .cover h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="academy-content" style="margin-top:1rem;">
-        <div class="brochure-cover" style="background:var(--academy-hero);color:white;padding:2rem;border-radius:1rem;text-align:center;margin-bottom:1.5rem;">
-            <h1>Learnify Academy | أكاديمية ليرنify</h1>
-            <p>Summer 2026 — Ages 6–18 | أعمار 6–18</p>
+    <div class="brochure-wrap">
+
+        <!-- COVER -->
+        <div class="cover">
+            <img src="../al_horya_school.jpg" alt="Learnify Academy">
+            <h1>Learnify Academy</h1>
+            <p class="tagline">من الماضي نبني المستقبل | From the Past We Build the Future</p>
+            <p>Summer 2026 | صيف 2026</p>
+            <p>Ages 6–18 | أعمار 6–18</p>
             <p>No coding needed for beginners | مبتدئ بدون خبرة</p>
+            <div class="price-banner">🎓 الكورس 900 ج &nbsp;|&nbsp; 🏕️ الكامب 300 ج</div>
         </div>
-        <section class="academy-section">
-            <h2>Courses | الكورسات (from 500 EGP)</h2>
-            <table class="academy-table">
-                <tr><th>Code</th><th>Course</th><th>Age</th><th>Price</th></tr>
-                <tr><td>LF-SC</td><td>Scratch & Creativity</td><td>6–11</td><td>550 EGP</td></tr>
-                <tr><td>LF-CY</td><td>Online Safety</td><td>11–16</td><td>500 EGP</td></tr>
-                <tr><td>LF-AP</td><td>App Builders</td><td>9–15</td><td>650 EGP</td></tr>
-                <tr><td>LF-WB</td><td>Web Makers</td><td>10–16</td><td>700 EGP</td></tr>
-                <tr><td>LF-AI</td><td>AI Explorers</td><td>10–16</td><td>750 EGP</td></tr>
-                <tr><td>LF-GD</td><td>Game Creators</td><td>8–16</td><td>750 EGP</td></tr>
-                <tr><td>LF-PY</td><td>Python</td><td>10–18</td><td>800 EGP</td></tr>
-                <tr><td>LF-RB</td><td>Robotics</td><td>7–16</td><td>850 EGP</td></tr>
-            </table>
-        </section>
-        <section class="academy-section page-break">
-            <h2>Camps | كامبات (from 450 EGP)</h2>
-            <table class="academy-table">
-                <tr><th>Code</th><th>Camp</th><th>Age</th><th>Price</th></tr>
-                <tr><td>CAMP-IN</td><td>Young Inventor</td><td>6–9</td><td>450 EGP</td></tr>
-                <tr><td>CAMP-GJ</td><td>Game Jam</td><td>8–14</td><td>550 EGP</td></tr>
-                <tr><td>CAMP-AP</td><td>App Launch</td><td>10–15</td><td>650 EGP</td></tr>
-                <tr><td>CAMP-WB</td><td>Web Studio</td><td>11–16</td><td>750 EGP</td></tr>
-                <tr><td>CAMP-AI</td><td>AI Makers</td><td>10–16</td><td>850 EGP</td></tr>
-                <tr><td>CAMP-RB</td><td>Robot Command</td><td>9–16</td><td>950 EGP</td></tr>
-            </table>
-            <p>2 weeks | 10 days | Demo Day for parents</p>
-        </section>
-        <section class="academy-section">
-            <h2>Contact | تواصل</h2>
-            <p>WhatsApp: <strong>01038583382</strong></p>
-            <p>Password portal: academy/index.html</p>
-            <p>Powered by Learnify Academy — June 2026</p>
-        </section>
+
+        <!-- COURSES -->
+        <div class="section-header">
+            <span class="icon">🎓</span>
+            <span>الكورسات الكاملة | Full-Year Courses — 900 EGP</span>
+        </div>
+        <div class="section-body">
+            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">كل كورس فيه مشاريع صغيرة كل أسبوع + مشروع كبير في الآخر | Each course has weekly small projects + one big final project</p>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>Scratch والإبداع | Scratch & Creativity</h3>
+                    <span class="code">LF-SC</span>
+                </div>
+                <div class="meta">👶 6–11 سنة | 12 أسبوع | Start</div>
+                <div class="desc">أول خطوة: قصص ملونة وألعاب بسيطة بدون كتابة كود معقد. | First step: colorful stories and easy games — no hard typing.</div>
+                <div class="learn">• تعلم سحب وإفلات الكتل لصنع قصص متحركة ملونة | Learn drag-and-drop blocks for animated stories<br>
+• ابنِ ألعاب بسيطة بشخصيات وأصوات | Build simple games with characters and sounds<br>
+• افهم التكرار والأحداث | Understand loops and events<br>
+• شارك مشروعك مع العائلة | Share your project with family</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: لعبة "رحلة الفرعون" | Final: "Pharaoh's Journey" game</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>اكتشف الذكاء الاصطناعي | AI Explorers</h3>
+                    <span class="code">LF-AI</span>
+                </div>
+                <div class="meta">🤖 10–16 سنة | 12 أسبوع | AI</div>
+                <div class="desc">إزاي الكمبيوتر "يتعرف" على الصور — بدون رياضيات صعبة. | How computers "recognize" pictures — no hard math.</div>
+                <div class="learn">• فهم كيف يتعلم الكمبيوتر من الصور | Understand how computers learn from images<br>
+• بناء كاشف صور بسيط | Build a simple image detector<br>
+• تجربة محادثة مع ذكاء اصطناعي | Try chatting with a simple AI<br>
+• مشروع نهائي: مساعد ذكي | Final: smart helper</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: كاشف صور أو مساعد بسيط | Final: image detector or simple assistant</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>صناعة الألعاب | Game Creators</h3>
+                    <span class="code">LF-GD</span>
+                </div>
+                <div class="meta">🎮 8–16 سنة | 16 أسبوع</div>
+                <div class="desc">من لعبة Scratch لحد ألعاب أكبر — خطوة ورا خطوة. | From Scratch to bigger games — one step at a time.</div>
+                <div class="learn">• تصميم ألعاب متعددة المراحل | Design multi-level games<br>
+• إضافة أصوات ومؤثرات ونقاط | Add sounds, effects, and scores<br>
+• فهم منطق اللعب | Understand game logic<br>
+• مشروع نهائي: لعبة مغامرة | Final: adventure game</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: لعبة مغامرة كاملة | Final: full adventure game</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>الروبوتات | Robo Engineers</h3>
+                    <span class="code">LF-RB</span>
+                </div>
+                <div class="meta">🤖 7–16 سنة | 20 أسبوع</div>
+                <div class="desc">توصيل دوائر، برمجة Arduino، وروبوت يتحرك من الموبايل. | Circuits, Arduino, and a robot you control from your phone.</div>
+                <div class="learn">• تعلم أساسيات الدوائر والتوصيل | Learn basic circuits and wiring<br>
+• برمجة Arduino لتحريك الروبوت | Program Arduino to move the robot<br>
+• التحكم بالبلوتوث | Control via Bluetooth<br>
+• استخدام المستشعرات | Use sensors to avoid obstacles</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: روبوت بالبلوتوث | Final: Bluetooth robot</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>تطبيقات الموبايل | App Builders</h3>
+                    <span class="code">LF-AP</span>
+                </div>
+                <div class="meta">📱 9–15 سنة | 12 أسبوع</div>
+                <div class="desc">تطبيق حقيقي على Android — كويز أو دليل أو ريموت. | A real Android app — quiz, guide, or remote control.</div>
+                <div class="learn">• تصميم واجهات تطبيقات بسيطة | Design simple app interfaces<br>
+• برمجة تطبيق حقيقي على Android | Program a real Android app<br>
+• استخدام الأزرار والشاشات المتعددة | Use buttons and multiple screens<br>
+• مشروع نهائي: تطبيق جاهز | Final: ready-to-use app</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: تطبيق جاهز للعرض | Final: app ready to demo</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>صناعة المواقع | Web Makers</h3>
+                    <span class="code">LF-WB</span>
+                </div>
+                <div class="meta">🌐 10–16 سنة | 14 أسبوع</div>
+                <div class="desc">صفحة شخصية وموقع بسيط — HTML و CSS بلغة سهلة. | Personal page and simple website — HTML & CSS made easy.</div>
+                <div class="learn">• تعلم HTML و CSS | Learn HTML & CSS<br>
+• تصميم موقع شخصي بألوان وصور | Design a personal site<br>
+• إضافة تأثيرات حركة | Add animations<br>
+• جعل الموقع يعمل على الموبايل | Make it mobile-friendly</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: موقع Portfolio | Final: portfolio website</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>بايثون للمبتدئين | Python Pioneers</h3>
+                    <span class="code">LF-PY</span>
+                </div>
+                <div class="meta">🐍 10–18 سنة | 16 أسبوع</div>
+                <div class="desc">برامج تفاعلية وألعاب نصية — أساس قوي للمستقبل. | Interactive programs and text games — strong base for the future.</div>
+                <div class="learn">• كتابة برامج Python بسيطة | Write simple Python programs<br>
+• بناء ألعاب نصية تفاعلية | Build interactive text games<br>
+• فهم المتغيرات والحلقات | Understand variables and loops<br>
+• أساس قوي لأي مسار تقني | Strong foundation for any tech path</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: محاكي أو لعبة نصية | Final: simulator or text game</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>أمان على الإنترنت | Cyber Guardians</h3>
+                    <span class="code">LF-CY</span>
+                </div>
+                <div class="meta">🔒 11–16 سنة | 8 أسابيع</div>
+                <div class="desc">حماية نفسك أونلاين — كلمات سر، خصوصية، وتصيّد. | Stay safe online — passwords, privacy, and phishing.</div>
+                <div class="learn">• إنشاء كلمات مرور قوية | Create strong passwords<br>
+• التعرف على الرسائل المخادعة | Recognize phishing messages<br>
+• حماية البيانات الشخصية | Protect personal data<br>
+• دليل أمان رقمي للعائلة | Build a family safety guide</div>
+                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: دليل أمان رقمي | Final: digital safety guide</div>
+            </div>
+        </div>
+
+        <!-- CAMPS -->
+        <div class="section-header page-break">
+            <span class="icon">🏕️</span>
+            <span>كامبات الصيف | Summer Camps — 300 EGP</span>
+        </div>
+        <div class="section-body">
+            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">10 أيام مركّزة | 4 ساعات يومياً | يوم عرض Demo Day | 10 focused days | 4 hours daily | Demo Day</p>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب صناع AI | AI Makers Camp</h3>
+                    <span class="code">CAMP-AI</span>
+                </div>
+                <div class="meta">🤖 10–16 سنة | 10 أيام</div>
+                <div class="desc">مشروع ذكاء يتعرف على صور أو يرد على أسئلة بسيطة. | AI project that recognizes images or answers simple questions.</div>
+                <div class="learn">• بناء مشروع ذكاء يتعرف على صور | Build an AI image recognition project<br>
+• تجربة محادثة مع روبوت | Try chatting with a robot<br>
+• فهم كيف تتعلم الآلات | Understand how machines learn<br>
+• مشروع نهائي: كاشف صور أو نبات ذكي | Final: image detector or smart plant</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب Game Jam | Game Jam Camp</h3>
+                    <span class="code">CAMP-GJ</span>
+                </div>
+                <div class="meta">🎮 8–14 سنة | 10 أيام | Start</div>
+                <div class="desc">لعبة Scratch كاملة في أسبوعين — الأكثر متعة! | Full Scratch game in two weeks — kids love this!</div>
+                <div class="learn">• تصميم لعبة كاملة في Scratch | Design a complete Scratch game<br>
+• إضافة أصوات ومؤثرات ونقاط | Add sounds, effects, and scores<br>
+• اختبار اللعبة مع الأصدقاء | Test the game with friends<br>
+• يوم العرض: تقديم اللعبة | Demo Day: present your game</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب الروبوت | Robot Command Camp</h3>
+                    <span class="code">CAMP-RB</span>
+                </div>
+                <div class="meta">🤖 9–16 سنة | 10 أيام</div>
+                <div class="desc">روبوت + تحكم من الموبايل. فرق 2–3 طلاب. | Robot + phone control. Teams of 2–3.</div>
+                <div class="learn">• تجميع وتوصيل دائرة روبوت | Assemble and wire a robot<br>
+• برمجة الروبوت للتحرك | Program the robot to move<br>
+• التحكم من تطبيق الموبايل | Control from a mobile app<br>
+• مسابقة صغيرة بين الفرق | Small team competition</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب التطبيقات | App Launch Camp</h3>
+                    <span class="code">CAMP-AP</span>
+                </div>
+                <div class="meta">📱 10–15 سنة | 10 أيام</div>
+                <div class="desc">تطبيق موبايل جاهز في أسبوعين. | Mobile app ready in two weeks.</div>
+                <div class="learn">• تصميم فكرة تطبيق | Design an app idea<br>
+• بناء التطبيق بـ App Inventor | Build with App Inventor<br>
+• اختباره على موبايل حقيقي | Test on a real phone<br>
+• مشروع نهائي: تطبيق جاهز | Final: ready-to-use app</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب الويب | Web Studio Camp</h3>
+                    <span class="code">CAMP-WB</span>
+                </div>
+                <div class="meta">🌐 11–16 سنة | 10 أيام</div>
+                <div class="desc">موقع شخصي تفاعلي — أول خطوة في عالم الويب. | Interactive personal website — first step into the web.</div>
+                <div class="learn">• بناء موقع شخصي بـ HTML و CSS | Build a personal site with HTML & CSS<br>
+• إضافة صور وألوان وصفحات | Add images, colors, and pages<br>
+• عرض الموقع على العائلة | Show the site to family<br>
+• مشروع نهائي: موقع Portfolio | Final: portfolio website</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب المخترع الصغير | Young Inventor Camp</h3>
+                    <span class="code">CAMP-IN</span>
+                </div>
+                <div class="meta">🧒 6–9 سنة | 10 أيام</div>
+                <div class="desc">للصغار: قصة تفاعلية + نشاط يدوي ممتع. | For little ones: interactive story + fun hands-on activity.</div>
+                <div class="learn">• سرد قصة تفاعلية رقمية | Tell an interactive digital story<br>
+• بناء نشاط يدوي بـ Kits | Build a hands-on activity with kits<br>
+• التعرف على ألوان وأشكال | Learn colors and shapes<br>
+• مشروع نهائي: قصة + نشاط | Final: story + activity</div>
+                <div class="price">300 ج | 300 EGP</div>
+            </div>
+
+            <div style="background:#FFFBF0;border:1px solid #D4AF37;border-radius:8px;padding:1rem;margin-top:1rem;text-align:center;font-weight:700;color:#92400E;">
+                🏆 يوم العرض: الطفل يشرح مشروعه 5 دقائق — شهادة + جائزة<br>
+                Demo Day: your child presents for 5 minutes — certificate + award
+            </div>
+        </div>
+
+        <!-- BRIEF CARDS -->
+        <div class="section-header">
+            <span class="icon">📝</span>
+            <span>بطاقات سريعة | Quick Cards</span>
+        </div>
+        <div class="section-body">
+            <div class="brief-row">
+                <div class="brief-box student">
+                    <div class="icon">🎓</div>
+                    <h3>بطاقة الطالب | Student Card</h3>
+                    <p style="font-size:0.85rem;color:#6B7280;">إيه اللي هتتعلمه وتحققه؟ | What will you learn and achieve?</p>
+                    <ul>
+                        <li>✅ ستبني مشروعاً حقيقياً بيدك | Build a real project</li>
+                        <li>✅ ستتعلم مهارات المستقبل (AI، برمجة، روبوتات) | Future skills</li>
+                        <li>✅ ستعرض مشروعك أمام العائلة | Present to family</li>
+                        <li>✅ ستشارك في مسابقات وتحصل على شهادات | Competitions + certificates</li>
+                    </ul>
+                </div>
+                <div class="brief-box parent">
+                    <div class="icon">👨‍👩‍👧</div>
+                    <h3>بطاقة الأهل | Parent Card</h3>
+                    <p style="font-size:0.85rem;color:#6B7280;">ليه تختار Learnify Academy؟ | Why choose us?</p>
+                    <ul>
+                        <li>✅ تحويل وقت الشاشة لمهارة مفيدة | Screen time → useful skills</li>
+                        <li>✅ مشاريع عملية + شهادات | Hands-on projects + certificates</li>
+                        <li>✅ أسعار مناسبة: كامب 300 ج — كورس 900 ج | Affordable prices</li>
+                        <li>✅ متابعة مستمرة وتقرير تقدم | Follow-up + progress reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- INSTRUCTORS -->
+        <div class="section-header">
+            <span class="icon">👨‍🏫</span>
+            <span>فريق المدربين | Our Instructors</span>
+        </div>
+        <div class="section-body">
+            <div class="instructor-row">
+                <div class="inst-card">
+                    <div class="avatar">👨‍🏫</div>
+                    <h4>أحمد حسن | Ahmed Hassan</h4>
+                    <div class="role">مدير أكاديمية Learnify | Lead Instructor</div>
+                    <div class="bio">متخصص في تعليم الأطفال البرمجة والروبوتات منذ 5 سنوات. Arduino Certified. يُدرّس: Scratch، Python، وElectronics.<br>Specialized in teaching kids coding and robotics for 5 years. Teaches: Scratch, Python, Electronics.</div>
+                </div>
+                <div class="inst-card">
+                    <div class="avatar">👩‍🏫</div>
+                    <h4>سارة محمد | Sara Mohamed</h4>
+                    <div class="role">مهندسة ميكاترونكس | Mechatronics Engineer</div>
+                    <div class="bio">مرشدة مسابقات روبوتات (WRO, FIRST). خبرة 4 سنوات في STEM. تُدرّس: Robotics، App Inventor، وAI.<br>Robotics competition mentor. 4 years STEM teaching. Teaches: Robotics, App Inventor, AI.</div>
+                </div>
+                <div class="inst-card">
+                    <div class="avatar">👨‍💻</div>
+                    <h4>عمر خالد | Omar Khaled</h4>
+                    <div class="role">باحث في الذكاء الاصطناعي | AI Researcher</div>
+                    <div class="bio">متخصص في تبسيط المفاهيم التقنية للأطفال. يُدرّس: AI Explorers، Web، وCyber Security.<br>Simplifies technical concepts for kids. Teaches: AI, Web, Cyber Security.</div>
+                </div>
+                <div class="inst-card">
+                    <div class="avatar">👩‍💻</div>
+                    <h4>ليلى يوسف | Laila Youssef</h4>
+                    <div class="role">مطورة برمجيات | Software Developer</div>
+                    <div class="bio">خبيرة في تصميم مشاريع إبداعية للأطفال. تُدرّس: Web Makers، App Builders، وGame Creators.<br>Expert in creative projects for kids. Teaches: Web, Apps, Game Creation.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="contact-section">
+            <h2>📞 تواصل معنا | Contact Us</h2>
+            <p>واتساب | WhatsApp: <a href="https://wa.me/201038583382">01038583382</a></p>
+            <p>الأحد – الخميس | Sun – Thu: 9 AM – 6 PM</p>
+            <p>🔐 بوابة المحتوى: academy/index.html | Password: Learnify2026</p>
+            <p class="footer-note">Powered by Learnify Academy — Summer 2026 | صيف 2026</p>
+        </div>
+
     </div>
 </body>
 </html>
