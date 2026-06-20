@@ -461,6 +461,166 @@ details.course-detail .detail-body {
     }
 }
 
+/* ========= NEW: LEARN BOX, INSTRUCTOR CARDS, BRIEF CARDS ========= */
+.learn-box {
+    background: #F0FDFA;
+    border: 1px solid #99F6E4;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #0F766E;
+    white-space: pre-line;
+}
+
+.instructor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.instructor-card {
+    background: linear-gradient(180deg, #FFFBF0 0%, white 100%);
+    border: 1px solid var(--color-gold);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.instructor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.instructor-avatar {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+}
+
+.instructor-card h3 {
+    color: var(--color-secondary);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.instructor-role {
+    font-weight: 700;
+    color: var(--color-gold-dark);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.instructor-bio {
+    font-size: 0.85rem;
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}
+
+.brief-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.brief-card {
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.brief-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.brief-card.student-card {
+    background: linear-gradient(180deg, #ECFDF5 0%, white 100%);
+    border: 2px solid #A7F3D0;
+}
+
+.brief-card.parent-card {
+    background: linear-gradient(180deg, #EFF6FF 0%, white 100%);
+    border: 2px solid #BFDBFE;
+}
+
+.brief-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.brief-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.brief-card.student-card h3 {
+    color: #065F46;
+}
+
+.brief-card.parent-card h3 {
+    color: #1E40AF;
+}
+
+.brief-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    text-align: start;
+}
+
+.brief-list li {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--color-gray-200);
+}
+
+.brief-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .instructor-grid,
+    .brief-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print enhancements */
+@media print {
+    .learn-box {
+        background: #F9FAFB !important;
+        border: 1px solid #E5E7EB !important;
+        color: #111827 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .instructor-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .brief-card.student-card {
+        background: #F0FDF4 !important;
+        border: 1px solid #A7F3D0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .brief-card.parent-card {
+        background: #EFF6FF !important;
+        border: 1px solid #BFDBFE !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
 /* ========= LOGIN PAGE ========= */
 .academy-login-page {
     min-height: 100vh;
