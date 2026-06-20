@@ -461,7 +461,7 @@ details.course-detail .detail-body {
     }
 }
 
-/* ========= NEW: LEARN BOX, INSTRUCTOR CARDS, BRIEF CARDS ========= */
+/* ========= NEW: LEARN BOX, TEAM BRIEF, BRIEF CARDS ========= */
 .learn-box {
     background: #F0FDFA;
     border: 1px solid #99F6E4;
@@ -474,49 +474,16 @@ details.course-detail .detail-body {
     white-space: pre-line;
 }
 
-.instructor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.instructor-card {
-    background: linear-gradient(180deg, #FFFBF0 0%, white 100%);
-    border: 1px solid var(--color-gold);
+.team-brief-box {
+    background: #FFFBF0;
+    border: 2px solid var(--color-gold);
     border-radius: var(--radius-lg);
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.instructor-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-}
-
-.instructor-avatar {
-    font-size: 3rem;
-    margin-bottom: 0.75rem;
-}
-
-.instructor-card h3 {
-    color: var(--color-secondary);
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-}
-
-.instructor-role {
-    font-weight: 700;
-    color: var(--color-gold-dark);
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-}
-
-.instructor-bio {
-    font-size: 0.85rem;
-    color: var(--color-gray-600);
-    line-height: 1.6;
+    padding: 1.5rem 2rem;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: #444;
+    white-space: pre-line;
+    margin-top: 1rem;
 }
 
 .brief-grid {
@@ -583,7 +550,6 @@ details.course-detail .detail-body {
 }
 
 @media (max-width: 768px) {
-    .instructor-grid,
     .brief-grid {
         grid-template-columns: 1fr;
     }
@@ -599,9 +565,9 @@ details.course-detail .detail-body {
         print-color-adjust: exact;
     }
 
-    .instructor-card {
-        background: white !important;
-        border: 1px solid #ccc !important;
+    .team-brief-box {
+        background: #FFFBF0 !important;
+        border: 2px solid #D4AF37 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
@@ -618,6 +584,19 @@ details.course-detail .detail-body {
         border: 1px solid #BFDBFE !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    }
+
+    details.course-detail {
+        border: 1px solid #ccc;
+    }
+
+    details.course-detail summary {
+        background: #eee !important;
+        color: black !important;
+    }
+
+    details.course-detail .detail-body {
+        display: block !important;
     }
 }
 

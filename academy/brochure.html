@@ -95,14 +95,20 @@
         }
 
         .cover .price-banner {
-            display: inline-block;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .cover .price-badge {
             background: #D4AF37;
             color: #164646;
-            padding: 0.6rem 1.5rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 50px;
             font-weight: 700;
-            margin-top: 1.5rem;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         /* Section headers */
@@ -190,6 +196,17 @@
             margin-bottom: 0.75rem;
         }
 
+        .item-card .content-box {
+            background: #FFF7ED;
+            border: 1px solid #FED7AA;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #7C2D12;
+            margin-bottom: 0.75rem;
+        }
+
         .item-card .price {
             font-size: 1.25rem;
             font-weight: 800;
@@ -266,43 +283,15 @@
             border-bottom: none;
         }
 
-        /* Instructors */
-        .instructor-row {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .inst-card {
-            background: var(--gold-light);
-            border: 1px solid var(--gold);
+        /* Team brief */
+        .team-brief {
+            background: #FFFBF0;
+            border: 2px solid #D4AF37;
             border-radius: 12px;
-            padding: 1rem;
-            text-align: center;
-            page-break-inside: avoid;
-        }
-
-        .inst-card .avatar {
-            font-size: 2.5rem;
-        }
-
-        .inst-card h4 {
-            color: #1E5C5C;
-            margin: 0.5rem 0 0.2rem;
-            font-size: 1rem;
-        }
-
-        .inst-card .role {
-            font-weight: 700;
-            color: #B45309;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .inst-card .bio {
-            font-size: 0.8rem;
-            color: #4B5563;
-            line-height: 1.5;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            color: #444;
         }
 
         /* Contact */
@@ -345,33 +334,23 @@
                 max-width: 100%;
             }
 
-            .item-card, .inst-card, .brief-box {
+            .item-card, .brief-box, .team-brief {
                 box-shadow: none !important;
             }
 
-            .cover {
+            .cover, .section-header, .contact-section {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
 
-            .section-header {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .contact-section {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .item-card .learn {
+            .item-card .learn, .item-card .content-box {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
         }
 
         @media (max-width: 600px) {
-            .brief-row, .instructor-row {
+            .brief-row {
                 grid-template-columns: 1fr;
             }
 
@@ -392,120 +371,35 @@
             <p>Summer 2026 | صيف 2026</p>
             <p>Ages 6–18 | أعمار 6–18</p>
             <p>No coding needed for beginners | مبتدئ بدون خبرة</p>
-            <div class="price-banner">🎓 الكورس 900 ج &nbsp;|&nbsp; 🏕️ الكامب 300 ج</div>
+            <div class="price-banner">
+                <div class="price-badge">🎓 كورس 800–900 ج</div>
+                <div class="price-badge">🏕️ كامب 200–300 ج</div>
+            </div>
         </div>
 
         <!-- COURSES -->
         <div class="section-header">
             <span class="icon">🎓</span>
-            <span>الكورسات الكاملة | Full-Year Courses — 900 EGP</span>
+            <span>الكورسات الكاملة | Full-Year Courses</span>
         </div>
         <div class="section-body">
-            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">كل كورس فيه مشاريع صغيرة كل أسبوع + مشروع كبير في الآخر | Each course has weekly small projects + one big final project</p>
+            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">كورسات مبسطة: 800 ج | كورسات متقدمة: 900 ج | Simple: 800 EGP | Advanced: 900 EGP</p>
 
             <div class="item-card">
                 <div class="card-header">
                     <h3>Scratch والإبداع | Scratch & Creativity</h3>
                     <span class="code">LF-SC</span>
                 </div>
-                <div class="meta">👶 6–11 سنة | 12 أسبوع | Start</div>
-                <div class="desc">أول خطوة: قصص ملونة وألعاب بسيطة بدون كتابة كود معقد. | First step: colorful stories and easy games — no hard typing.</div>
-                <div class="learn">• تعلم سحب وإفلات الكتل لصنع قصص متحركة ملونة | Learn drag-and-drop blocks for animated stories<br>
-• ابنِ ألعاب بسيطة بشخصيات وأصوات | Build simple games with characters and sounds<br>
-• افهم التكرار والأحداث | Understand loops and events<br>
-• شارك مشروعك مع العائلة | Share your project with family</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: لعبة "رحلة الفرعون" | Final: "Pharaoh's Journey" game</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>اكتشف الذكاء الاصطناعي | AI Explorers</h3>
-                    <span class="code">LF-AI</span>
-                </div>
-                <div class="meta">🤖 10–16 سنة | 12 أسبوع | AI</div>
-                <div class="desc">إزاي الكمبيوتر "يتعرف" على الصور — بدون رياضيات صعبة. | How computers "recognize" pictures — no hard math.</div>
-                <div class="learn">• فهم كيف يتعلم الكمبيوتر من الصور | Understand how computers learn from images<br>
-• بناء كاشف صور بسيط | Build a simple image detector<br>
-• تجربة محادثة مع ذكاء اصطناعي | Try chatting with a simple AI<br>
-• مشروع نهائي: مساعد ذكي | Final: smart helper</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: كاشف صور أو مساعد بسيط | Final: image detector or simple assistant</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>صناعة الألعاب | Game Creators</h3>
-                    <span class="code">LF-GD</span>
-                </div>
-                <div class="meta">🎮 8–16 سنة | 16 أسبوع</div>
-                <div class="desc">من لعبة Scratch لحد ألعاب أكبر — خطوة ورا خطوة. | From Scratch to bigger games — one step at a time.</div>
-                <div class="learn">• تصميم ألعاب متعددة المراحل | Design multi-level games<br>
-• إضافة أصوات ومؤثرات ونقاط | Add sounds, effects, and scores<br>
-• فهم منطق اللعب | Understand game logic<br>
-• مشروع نهائي: لعبة مغامرة | Final: adventure game</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: لعبة مغامرة كاملة | Final: full adventure game</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>الروبوتات | Robo Engineers</h3>
-                    <span class="code">LF-RB</span>
-                </div>
-                <div class="meta">🤖 7–16 سنة | 20 أسبوع</div>
-                <div class="desc">توصيل دوائر، برمجة Arduino، وروبوت يتحرك من الموبايل. | Circuits, Arduino, and a robot you control from your phone.</div>
-                <div class="learn">• تعلم أساسيات الدوائر والتوصيل | Learn basic circuits and wiring<br>
-• برمجة Arduino لتحريك الروبوت | Program Arduino to move the robot<br>
-• التحكم بالبلوتوث | Control via Bluetooth<br>
-• استخدام المستشعرات | Use sensors to avoid obstacles</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: روبوت بالبلوتوث | Final: Bluetooth robot</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>تطبيقات الموبايل | App Builders</h3>
-                    <span class="code">LF-AP</span>
-                </div>
-                <div class="meta">📱 9–15 سنة | 12 أسبوع</div>
-                <div class="desc">تطبيق حقيقي على Android — كويز أو دليل أو ريموت. | A real Android app — quiz, guide, or remote control.</div>
-                <div class="learn">• تصميم واجهات تطبيقات بسيطة | Design simple app interfaces<br>
-• برمجة تطبيق حقيقي على Android | Program a real Android app<br>
-• استخدام الأزرار والشاشات المتعددة | Use buttons and multiple screens<br>
-• مشروع نهائي: تطبيق جاهز | Final: ready-to-use app</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: تطبيق جاهز للعرض | Final: app ready to demo</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>صناعة المواقع | Web Makers</h3>
-                    <span class="code">LF-WB</span>
-                </div>
-                <div class="meta">🌐 10–16 سنة | 14 أسبوع</div>
-                <div class="desc">صفحة شخصية وموقع بسيط — HTML و CSS بلغة سهلة. | Personal page and simple website — HTML & CSS made easy.</div>
-                <div class="learn">• تعلم HTML و CSS | Learn HTML & CSS<br>
-• تصميم موقع شخصي بألوان وصور | Design a personal site<br>
-• إضافة تأثيرات حركة | Add animations<br>
-• جعل الموقع يعمل على الموبايل | Make it mobile-friendly</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: موقع Portfolio | Final: portfolio website</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>بايثون للمبتدئين | Python Pioneers</h3>
-                    <span class="code">LF-PY</span>
-                </div>
-                <div class="meta">🐍 10–18 سنة | 16 أسبوع</div>
-                <div class="desc">برامج تفاعلية وألعاب نصية — أساس قوي للمستقبل. | Interactive programs and text games — strong base for the future.</div>
-                <div class="learn">• كتابة برامج Python بسيطة | Write simple Python programs<br>
-• بناء ألعاب نصية تفاعلية | Build interactive text games<br>
-• فهم المتغيرات والحلقات | Understand variables and loops<br>
-• أساس قوي لأي مسار تقني | Strong foundation for any tech path</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: محاكي أو لعبة نصية | Final: simulator or text game</div>
+                <div class="meta">👶 6–11 سنة | 12 أسبوع | 800 ج | Start</div>
+                <div class="desc">أول خطوة: قصص ملونة وألعاب بسيطة بدون كتابة كود معقد.</div>
+                <div class="learn">• سحب وإفلات الكتل | Drag-and-drop blocks<br>
+• ألعاب بشخصيات وأصوات | Characters & sounds<br>
+• التكرار والأحداث | Loops & events<br>
+• مشاركة المشروع | Share your project</div>
+                <div class="content-box">📋 الشهر 1–2: Scratch أساسيات، ألوان وأشكال، أول قصة متحركة.<br>
+📋 الشهر 3–4: ألعاب، متغيرات ونقاط، تصادم، تصميم مراحل، مشروع "رحلة الفرعون".</div>
+                <div class="price">800 ج | 800 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: لعبة "رحلة الفرعون" | "Pharaoh's Journey" game</div>
             </div>
 
             <div class="item-card">
@@ -513,37 +407,143 @@
                     <h3>أمان على الإنترنت | Cyber Guardians</h3>
                     <span class="code">LF-CY</span>
                 </div>
-                <div class="meta">🔒 11–16 سنة | 8 أسابيع</div>
-                <div class="desc">حماية نفسك أونلاين — كلمات سر، خصوصية، وتصيّد. | Stay safe online — passwords, privacy, and phishing.</div>
-                <div class="learn">• إنشاء كلمات مرور قوية | Create strong passwords<br>
-• التعرف على الرسائل المخادعة | Recognize phishing messages<br>
-• حماية البيانات الشخصية | Protect personal data<br>
-• دليل أمان رقمي للعائلة | Build a family safety guide</div>
-                <div class="price">900 ج (مجموعة) | 900 EGP (group)</div>
-                <div class="project">🎯 مشروع نهائي: دليل أمان رقمي | Final: digital safety guide</div>
+                <div class="meta">🔒 11–16 سنة | 8 أسابيع | 800 ج</div>
+                <div class="desc">حماية نفسك أونلاين — كلمات سر، خصوصية، وتصيّد.</div>
+                <div class="learn">• كلمات مرور قوية | Strong passwords<br>
+• التصيّد والرسائل المخادعة | Phishing & scams<br>
+• حماية البيانات | Data protection<br>
+• دليل أمان للعائلة | Family safety guide</div>
+                <div class="content-box">📋 الشهر 1–2: كلمات المرور، 2FA، التصيّد، التتبع الرقمي، مشروع: دليل أمان رقمي.</div>
+                <div class="price">800 ج | 800 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: دليل أمان رقمي | Digital safety guide</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>تطبيقات الموبايل | App Builders</h3>
+                    <span class="code">LF-AP</span>
+                </div>
+                <div class="meta">📱 9–15 سنة | 12 أسبوع | 800 ج</div>
+                <div class="desc">تطبيق حقيقي على Android — كويز أو دليل أو ريموت.</div>
+                <div class="learn">• تصميم واجهات بسيطة | Simple UI design<br>
+• برمجة على Android | Real Android app<br>
+• أزرار وشاشات متعددة | Buttons & screens<br>
+• تطبيق جاهز | Ready-to-use app</div>
+                <div class="content-box">📋 الشهر 1–2: App Inventor، التصميم والشاشات، أول كويز تفاعلي.<br>
+📋 الشهر 3–4: TinyDB، شاشات متعددة، APIs، تطبيق جاهز على Android.</div>
+                <div class="price">800 ج | 800 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: تطبيق جاهز | Ready-to-use app</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>صناعة المواقع | Web Makers</h3>
+                    <span class="code">LF-WB</span>
+                </div>
+                <div class="meta">🌐 10–16 سنة | 14 أسبوع | 800 ج</div>
+                <div class="desc">صفحة شخصية وموقع بسيط — HTML و CSS بلغة سهلة.</div>
+                <div class="learn">• HTML و CSS | HTML & CSS<br>
+• موقع شخصي بألوان وصور | Personal site<br>
+• تأثيرات حركة | Animations<br>
+• متجاوب على الموبايل | Mobile-friendly</div>
+                <div class="content-box">📋 الشهر 1–2: HTML أساسيات، CSS ألوان وخطوط، Flexbox، أول صفحة شخصية متجاوبة.<br>
+📋 الشهر 3–4: JavaScript أساسيات، تأثيرات، موقع متعدد الصفحات، نشر على GitHub.</div>
+                <div class="price">800 ج | 800 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: موقع Portfolio | Portfolio website</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>صناعة الألعاب | Game Creators</h3>
+                    <span class="code">LF-GD</span>
+                </div>
+                <div class="meta">🎮 8–16 سنة | 16 أسبوع | 900 ج</div>
+                <div class="desc">من لعبة Scratch لحد ألعاب أكبر — خطوة ورا خطوة.</div>
+                <div class="learn">• ألعاب متعددة المراحل | Multi-level games<br>
+• أصوات ومؤثرات ونقاط | Sounds & scores<br>
+• منطق اللعب | Game logic<br>
+• لعبة مغامرة | Adventure game</div>
+                <div class="content-box">📋 الشهر 1–2: Scratch ألعاب متعددة المراحل، شخصيات وحركة، صعوبة متصاعدة.<br>
+📋 الشهر 3–4: Python مقدمة، pygame أساسيات، ألعاب نصية، مشروع مغامرة كاملة.</div>
+                <div class="price">900 ج | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: لعبة مغامرة كاملة | Full adventure game</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>الروبوتات | Robo Engineers</h3>
+                    <span class="code">LF-RB</span>
+                </div>
+                <div class="meta">🤖 7–16 سنة | 20 أسبوع | 900 ج</div>
+                <div class="desc">توصيل دوائر، برمجة Arduino، وروبوت يتحرك من الموبايل.</div>
+                <div class="learn">• الدوائر والتوصيل | Circuits & wiring<br>
+• Arduino وتحريك الروبوت | Arduino programming<br>
+• تحكم بالبلوتوث | Bluetooth control<br>
+• مستشعرات وتجنب عوائق | Sensors</div>
+                <div class="content-box">📋 الشهر 1–2: إلكترونيات أساسية، Arduino IDE، LED وموتور، أول برنامج.<br>
+📋 الشهر 3–4: مستشعرات، تتبع خط، تجنب عوائق، تجميع الروبوت.<br>
+📋 الشهر 5–6: بلوتوث HC-05، تطبيق موبايل، تحديات، مشروع روبوت كامل.</div>
+                <div class="price">900 ج | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: روبوت بالبلوتوث | Bluetooth robot</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>بايثون للمبتدئين | Python Pioneers</h3>
+                    <span class="code">LF-PY</span>
+                </div>
+                <div class="meta">🐍 10–18 سنة | 16 أسبوع | 900 ج</div>
+                <div class="desc">برامج تفاعلية وألعاب نصية — أساس قوي للمستقبل.</div>
+                <div class="learn">• برامج Python بسيطة | Simple Python programs<br>
+• ألعاب نصية تفاعلية | Text games<br>
+• متغيرات وحلقات وشروط | Variables & loops<br>
+• أساس قوي للمستقبل | Strong foundation</div>
+                <div class="content-box">📋 الشهر 1–2: Python مقدمة، متغيرات، if/for/while، دوال، أول حاسبة.<br>
+📋 الشهر 3–4: قوائم وقواميس، ملفات، لعبة مغامرة نصية، محاكي، مشروع نهائي.</div>
+                <div class="price">900 ج | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: محاكي أو لعبة نصية | Simulator or text game</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>اكتشف الذكاء الاصطناعي | AI Explorers</h3>
+                    <span class="code">LF-AI</span>
+                </div>
+                <div class="meta">🤖 10–16 سنة | 12 أسبوع | 900 ج | AI</div>
+                <div class="desc">إزاي الكمبيوتر "يتعرف" على الصور — بدون رياضيات صعبة.</div>
+                <div class="learn">• كيف يتعلم الكمبيوتر | How computers learn<br>
+• كاشف صور بسيط | Image detector<br>
+• محادثة مع AI | Chat with AI<br>
+• مساعد ذكي | Smart assistant</div>
+                <div class="content-box">📋 الشهر 1–2: AI مقدمة، Teachable Machine، تدريب بيانات شخصية، كاشف أول.<br>
+📋 الشهر 3–4: NLP، chatbot بسيط، ربط صور ونص، مشروع AI كامل.</div>
+                <div class="price">900 ج | 900 EGP (group)</div>
+                <div class="project">🎯 مشروع نهائي: كاشف صور أو مساعد | Image detector or smart assistant</div>
             </div>
         </div>
 
         <!-- CAMPS -->
         <div class="section-header page-break">
             <span class="icon">🏕️</span>
-            <span>كامبات الصيف | Summer Camps — 300 EGP</span>
+            <span>كامبات الصيف | Summer Camps</span>
         </div>
         <div class="section-body">
-            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">10 أيام مركّزة | 4 ساعات يومياً | يوم عرض Demo Day | 10 focused days | 4 hours daily | Demo Day</p>
+            <p style="color:#6B7280;font-size:0.9rem;margin-bottom:1rem;">10 أيام مركّزة | 4 ساعات يومياً | 3 مستويات: 200 ج (بسيط) | 250 ج (متوسط) | 300 ج (متقدم)</p>
 
             <div class="item-card">
                 <div class="card-header">
-                    <h3>كامب صناع AI | AI Makers Camp</h3>
-                    <span class="code">CAMP-AI</span>
+                    <h3>كامب المخترع الصغير | Young Inventor Camp</h3>
+                    <span class="code">CAMP-IN</span>
                 </div>
-                <div class="meta">🤖 10–16 سنة | 10 أيام</div>
-                <div class="desc">مشروع ذكاء يتعرف على صور أو يرد على أسئلة بسيطة. | AI project that recognizes images or answers simple questions.</div>
-                <div class="learn">• بناء مشروع ذكاء يتعرف على صور | Build an AI image recognition project<br>
-• تجربة محادثة مع روبوت | Try chatting with a robot<br>
-• فهم كيف تتعلم الآلات | Understand how machines learn<br>
-• مشروع نهائي: كاشف صور أو نبات ذكي | Final: image detector or smart plant</div>
-                <div class="price">300 ج | 300 EGP</div>
+                <div class="meta">🧒 6–9 سنة | 10 أيام | 200 ج | بسيط</div>
+                <div class="desc">للصغار: قصة تفاعلية + نشاط يدوي ممتع.</div>
+                <div class="learn">• قصة رقمية تفاعلية | Interactive story<br>
+• نشاط يدوي بـ Kit | Hands-on activity<br>
+• ألوان وأشكال وحركة | Colors & shapes<br>
+• قصة + نشاط يدوي | Story + activity</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — ألوان وأشكال. اليوم 2 — سحب وإفلات. اليوم 3–4 — قصة تفاعلية. اليوم 5 — نشاط يدوي.<br>
+📋 الأسبوع 2: اليوم 6 — أصوات وحركة. اليوم 7 — ربط القصة بالنشاط. اليوم 8 — تلميع. اليوم 9 — تدريب. اليوم 10 — Demo Day.</div>
+                <div class="price">200 ج | 200 EGP</div>
             </div>
 
             <div class="item-card">
@@ -551,12 +551,62 @@
                     <h3>كامب Game Jam | Game Jam Camp</h3>
                     <span class="code">CAMP-GJ</span>
                 </div>
-                <div class="meta">🎮 8–14 سنة | 10 أيام | Start</div>
-                <div class="desc">لعبة Scratch كاملة في أسبوعين — الأكثر متعة! | Full Scratch game in two weeks — kids love this!</div>
-                <div class="learn">• تصميم لعبة كاملة في Scratch | Design a complete Scratch game<br>
-• إضافة أصوات ومؤثرات ونقاط | Add sounds, effects, and scores<br>
-• اختبار اللعبة مع الأصدقاء | Test the game with friends<br>
-• يوم العرض: تقديم اللعبة | Demo Day: present your game</div>
+                <div class="meta">🎮 8–14 سنة | 10 أيام | 250 ج | متوسط | Start</div>
+                <div class="desc">لعبة Scratch كاملة في أسبوعين — الأكثر متعة!</div>
+                <div class="learn">• لعبة كاملة في Scratch | Complete Scratch game<br>
+• أصوات ومؤثرات ونقاط | Sounds & scores<br>
+• اختبار مع الأصدقاء | Test with friends<br>
+• تقديم اللعبة | Present your game</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — فكرة وشخصيات. اليوم 2 — مسرح وحركة. اليوم 3 — تحكم وأحداث. اليوم 4 — نقاط وتصادم. اليوم 5 — صوت ومؤثرات.<br>
+📋 الأسبوع 2: اليوم 6 — مراحل متعددة. اليوم 7 — صعوبة متصاعدة. اليوم 8 — تلميع. اليوم 9 — تدريب. اليوم 10 — Demo Day.</div>
+                <div class="price">250 ج | 250 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب التطبيقات | App Launch Camp</h3>
+                    <span class="code">CAMP-AP</span>
+                </div>
+                <div class="meta">📱 10–15 سنة | 10 أيام | 250 ج | متوسط</div>
+                <div class="desc">تطبيق موبايل جاهز في أسبوعين.</div>
+                <div class="learn">• فكرة تطبيق | App idea<br>
+• App Inventor | Build with App Inventor<br>
+• اختبار على موبايل | Test on real phone<br>
+• تطبيق جاهز | Ready-to-use app</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — فكرة و App Inventor. اليوم 2 — تصميم. اليوم 3 — أزرار وشاشات. اليوم 4 — مدخلات وتخزين. اليوم 5 — ألوان.<br>
+📋 الأسبوع 2: اليوم 6 — منطق وبرمجة. اليوم 7 — اختبار على موبايل. اليوم 8 — تصحيح. اليوم 9 — تدريب. اليوم 10 — Demo Day.</div>
+                <div class="price">250 ج | 250 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب الويب | Web Studio Camp</h3>
+                    <span class="code">CAMP-WB</span>
+                </div>
+                <div class="meta">🌐 11–16 سنة | 10 أيام | 250 ج | متوسط</div>
+                <div class="desc">موقع شخصي تفاعلي — أول خطوة في عالم الويب.</div>
+                <div class="learn">• موقع شخصي بـ HTML/CSS | Personal site<br>
+• صور وألوان وصفحات | Images & colors<br>
+• عرض على العائلة | Show to family<br>
+• Portfolio كامل | Complete portfolio</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — HTML وهيكل الصفحة. اليوم 2 — نصوص وصور. اليوم 3 — CSS ألوان. اليوم 4 — تنسيق وتجاوب. اليوم 5 — تنقل وروابط.<br>
+📋 الأسبوع 2: اليوم 6 — JavaScript تفاعلية. اليوم 7 — تأثيرات. اليوم 8 — موقع متعدد الصفحات. اليوم 9 — تدريب. اليوم 10 — Demo Day.</div>
+                <div class="price">250 ج | 250 EGP</div>
+            </div>
+
+            <div class="item-card">
+                <div class="card-header">
+                    <h3>كامب صناع AI | AI Makers Camp</h3>
+                    <span class="code">CAMP-AI</span>
+                </div>
+                <div class="meta">🤖 10–16 سنة | 10 أيام | 300 ج | متقدم</div>
+                <div class="desc">مشروع ذكاء يتعرف على صور أو يرد على أسئلة.</div>
+                <div class="learn">• مشروع AI يتعرف على صور | Image recognition<br>
+• محادثة مع روبوت | Chat with a robot<br>
+• كيف تتعلم الآلات | How machines learn<br>
+• كاشف صور أو نبات ذكي | Image detector</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — ما هو AI؟ أدوات التعرف. اليوم 2 — تدريب أول نموذج. اليوم 3 — كاشف صور. اليوم 4 — بيانات شخصية. اليوم 5 — صوت ونص.<br>
+📋 الأسبوع 2: اليوم 6 — chatbot بسيط. اليوم 7 — ربط صور ونص. اليوم 8 — تلميع. اليوم 9 — تدريب. اليوم 10 — Demo Day.</div>
                 <div class="price">300 ج | 300 EGP</div>
             </div>
 
@@ -565,54 +615,14 @@
                     <h3>كامب الروبوت | Robot Command Camp</h3>
                     <span class="code">CAMP-RB</span>
                 </div>
-                <div class="meta">🤖 9–16 سنة | 10 أيام</div>
-                <div class="desc">روبوت + تحكم من الموبايل. فرق 2–3 طلاب. | Robot + phone control. Teams of 2–3.</div>
-                <div class="learn">• تجميع وتوصيل دائرة روبوت | Assemble and wire a robot<br>
-• برمجة الروبوت للتحرك | Program the robot to move<br>
-• التحكم من تطبيق الموبايل | Control from a mobile app<br>
-• مسابقة صغيرة بين الفرق | Small team competition</div>
-                <div class="price">300 ج | 300 EGP</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>كامب التطبيقات | App Launch Camp</h3>
-                    <span class="code">CAMP-AP</span>
-                </div>
-                <div class="meta">📱 10–15 سنة | 10 أيام</div>
-                <div class="desc">تطبيق موبايل جاهز في أسبوعين. | Mobile app ready in two weeks.</div>
-                <div class="learn">• تصميم فكرة تطبيق | Design an app idea<br>
-• بناء التطبيق بـ App Inventor | Build with App Inventor<br>
-• اختباره على موبايل حقيقي | Test on a real phone<br>
-• مشروع نهائي: تطبيق جاهز | Final: ready-to-use app</div>
-                <div class="price">300 ج | 300 EGP</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>كامب الويب | Web Studio Camp</h3>
-                    <span class="code">CAMP-WB</span>
-                </div>
-                <div class="meta">🌐 11–16 سنة | 10 أيام</div>
-                <div class="desc">موقع شخصي تفاعلي — أول خطوة في عالم الويب. | Interactive personal website — first step into the web.</div>
-                <div class="learn">• بناء موقع شخصي بـ HTML و CSS | Build a personal site with HTML & CSS<br>
-• إضافة صور وألوان وصفحات | Add images, colors, and pages<br>
-• عرض الموقع على العائلة | Show the site to family<br>
-• مشروع نهائي: موقع Portfolio | Final: portfolio website</div>
-                <div class="price">300 ج | 300 EGP</div>
-            </div>
-
-            <div class="item-card">
-                <div class="card-header">
-                    <h3>كامب المخترع الصغير | Young Inventor Camp</h3>
-                    <span class="code">CAMP-IN</span>
-                </div>
-                <div class="meta">🧒 6–9 سنة | 10 أيام</div>
-                <div class="desc">للصغار: قصة تفاعلية + نشاط يدوي ممتع. | For little ones: interactive story + fun hands-on activity.</div>
-                <div class="learn">• سرد قصة تفاعلية رقمية | Tell an interactive digital story<br>
-• بناء نشاط يدوي بـ Kits | Build a hands-on activity with kits<br>
-• التعرف على ألوان وأشكال | Learn colors and shapes<br>
-• مشروع نهائي: قصة + نشاط | Final: story + activity</div>
+                <div class="meta">🤖 9–16 سنة | 10 أيام | 300 ج | متقدم</div>
+                <div class="desc">روبوت + تحكم من الموبايل. فرق 2–3 طلاب.</div>
+                <div class="learn">• تجميع وتوصيل روبوت | Assemble robot<br>
+• برمجة الروبوت | Program the robot<br>
+• تحكم من الموبايل | Mobile control<br>
+• مسابقة فرق | Team competition</div>
+                <div class="content-box">📋 الأسبوع 1: اليوم 1 — دوائر وArduino. اليوم 2 — تحريك موتورات. اليوم 3 — مستشعرات. اليوم 4 — تجميع الروبوت. اليوم 5 — برمجة حركة.<br>
+📋 الأسبوع 2: اليوم 6 — بلوتوث وتوصيل. اليوم 7 — تطبيق تحكم. اليوم 8 — تجنب عوائق. اليوم 9 — تحدي فرق. اليوم 10 — Demo Day.</div>
                 <div class="price">300 ج | 300 EGP</div>
             </div>
 
@@ -647,44 +657,32 @@
                     <ul>
                         <li>✅ تحويل وقت الشاشة لمهارة مفيدة | Screen time → useful skills</li>
                         <li>✅ مشاريع عملية + شهادات | Hands-on projects + certificates</li>
-                        <li>✅ أسعار مناسبة: كامب 300 ج — كورس 900 ج | Affordable prices</li>
+                        <li>✅ أسعار مناسبة: كامب 200–300 ج — كورس 800–900 ج | Affordable prices</li>
                         <li>✅ متابعة مستمرة وتقرير تقدم | Follow-up + progress reports</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- INSTRUCTORS -->
+        <!-- TEAM BRIEF -->
         <div class="section-header">
             <span class="icon">👨‍🏫</span>
-            <span>فريق المدربين | Our Instructors</span>
+            <span>فريق التدريب | Our Training Team</span>
         </div>
         <div class="section-body">
-            <div class="instructor-row">
-                <div class="inst-card">
-                    <div class="avatar">👨‍🏫</div>
-                    <h4>أحمد حسن | Ahmed Hassan</h4>
-                    <div class="role">مدير أكاديمية Learnify | Lead Instructor</div>
-                    <div class="bio">متخصص في تعليم الأطفال البرمجة والروبوتات منذ 5 سنوات. Arduino Certified. يُدرّس: Scratch، Python، وElectronics.<br>Specialized in teaching kids coding and robotics for 5 years. Teaches: Scratch, Python, Electronics.</div>
-                </div>
-                <div class="inst-card">
-                    <div class="avatar">👩‍🏫</div>
-                    <h4>سارة محمد | Sara Mohamed</h4>
-                    <div class="role">مهندسة ميكاترونكس | Mechatronics Engineer</div>
-                    <div class="bio">مرشدة مسابقات روبوتات (WRO, FIRST). خبرة 4 سنوات في STEM. تُدرّس: Robotics، App Inventor، وAI.<br>Robotics competition mentor. 4 years STEM teaching. Teaches: Robotics, App Inventor, AI.</div>
-                </div>
-                <div class="inst-card">
-                    <div class="avatar">👨‍💻</div>
-                    <h4>عمر خالد | Omar Khaled</h4>
-                    <div class="role">باحث في الذكاء الاصطناعي | AI Researcher</div>
-                    <div class="bio">متخصص في تبسيط المفاهيم التقنية للأطفال. يُدرّس: AI Explorers، Web، وCyber Security.<br>Simplifies technical concepts for kids. Teaches: AI, Web, Cyber Security.</div>
-                </div>
-                <div class="inst-card">
-                    <div class="avatar">👩‍💻</div>
-                    <h4>ليلى يوسف | Laila Youssef</h4>
-                    <div class="role">مطورة برمجيات | Software Developer</div>
-                    <div class="bio">خبيرة في تصميم مشاريع إبداعية للأطفال. تُدرّس: Web Makers، App Builders، وGame Creators.<br>Expert in creative projects for kids. Teaches: Web, Apps, Game Creation.</div>
-                </div>
+            <div class="team-brief">
+                • فريقنا مكون من مهندسين متخصصين في مجالات البرمجة، الروبوتات، الذكاء الاصطناعي، وتطوير الويب والتطبيقات.<br>
+                • خبرة في تعليم الأطفال من عمر 6 سنوات حتى 18 سنة، بأسلوب مبسط وعملي.<br>
+                • مرشدون مسابقات روبوتات (WRO, FIRST, RoboCup) وبرمجة (DECI).<br>
+                • شهادات معتمدة: Arduino Certified، Microsoft AI Fundamentals، وغيرها.<br>
+                • هدفنا: تحويل وقت الشاشة إلى مهارة مفيدة، بطريقة ممتعة ومليئة بالمشاريع العملية.<br>
+                • كل مدرب يشرح بالعربي مع المصطلحات الإنجليزية الأساسية — 80% عملي على الكمبيوتر.<br><br>
+                • Our team consists of engineers specialized in programming, robotics, AI, web & app development.<br>
+                • Experienced in teaching children from ages 6 to 18, with a simple and practical approach.<br>
+                • Robotics competition mentors (WRO, FIRST, RoboCup) and programming mentors (DECI).<br>
+                • Certified credentials: Arduino Certified, Microsoft AI Fundamentals, and more.<br>
+                • Our goal: turn screen time into useful skills, in a fun and project-filled way.<br>
+                • Every instructor teaches in Arabic with essential English terms — 80% hands-on computer work.
             </div>
         </div>
 
