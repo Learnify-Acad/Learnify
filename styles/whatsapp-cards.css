@@ -1,0 +1,286 @@
+/* WhatsApp marketing cards — mobile screenshot ready */
+
+.wa-page {
+    background: #1a1a2e;
+    min-height: 100vh;
+    padding: 1rem 0 3rem;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+}
+
+.wa-tip {
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    color: #E5E7EB;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.wa-tip strong {
+    color: #D4AF37;
+}
+
+.wa-section-title {
+    max-width: 400px;
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.wa-cards-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Each card = one WhatsApp image (screenshot) */
+.wa-card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 520px;
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.wa-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.wa-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-brand {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+.wa-code {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.wa-icon {
+    font-size: 3.5rem;
+    margin: 0.5rem 0 1rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-card h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-card .wa-tagline {
+    font-size: 1rem;
+    opacity: 0.95;
+    line-height: 1.55;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-pill {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.wa-pill.price {
+    background: rgba(212, 175, 55, 0.95);
+    color: #1a1a2e;
+    font-size: 1rem;
+}
+
+.wa-pill.hot {
+    background: #EF4444;
+}
+
+.wa-footer {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.wa-footer .wa-phone {
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wa-footer .wa-cta {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-top: 0.35rem;
+}
+
+.wa-copy-btn {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: -1rem auto 0;
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    color: #D4AF37;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.wa-copy-btn:active {
+    background: rgba(212, 175, 55, 0.2);
+}
+
+/* Gradient themes */
+.wa-theme-hero {
+    background: linear-gradient(145deg, #164646 0%, #1E5C5C 40%, #C19A6B 100%);
+}
+
+.wa-theme-scratch {
+    background: linear-gradient(145deg, #7C3AED 0%, #A855F7 50%, #EC4899 100%);
+}
+
+.wa-theme-ai {
+    background: linear-gradient(145deg, #0E7490 0%, #0891B2 50%, #06B6D4 100%);
+}
+
+.wa-theme-game {
+    background: linear-gradient(145deg, #EA580C 0%, #F97316 50%, #FBBF24 100%);
+}
+
+.wa-theme-robot {
+    background: linear-gradient(145deg, #DC2626 0%, #EF4444 50%, #F87171 100%);
+}
+
+.wa-theme-app {
+    background: linear-gradient(145deg, #059669 0%, #10B981 50%, #34D399 100%);
+}
+
+.wa-theme-web {
+    background: linear-gradient(145deg, #2563EB 0%, #3B82F6 50%, #60A5FA 100%);
+}
+
+.wa-theme-python {
+    background: linear-gradient(145deg, #CA8A04 0%, #EAB308 50%, #FDE047 100%);
+    color: #1F2937;
+}
+
+.wa-theme-python .wa-code,
+.wa-theme-python .wa-pill:not(.price) {
+    background: rgba(0, 0, 0, 0.15);
+    color: #1F2937;
+}
+
+.wa-theme-python .wa-footer {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.wa-theme-cyber {
+    background: linear-gradient(145deg, #1E3A5F 0%, #312E81 50%, #4C1D95 100%);
+}
+
+.wa-theme-camp {
+    background: linear-gradient(145deg, #B45309 0%, #D97706 40%, #1E5C5C 100%);
+}
+
+.wa-theme-contact {
+    background: linear-gradient(145deg, #065F46 0%, #047857 50%, #10B981 100%);
+}
+
+.wa-theme-summary {
+    background: linear-gradient(160deg, #1E5C5C 0%, #164646 60%, #D4AF37 100%);
+}
+
+.wa-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+.wa-list li::before {
+    content: '◆ ';
+    color: #D4AF37;
+    font-size: 0.65rem;
+}
+
+.wa-badge-new {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #EF4444;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+html[dir="rtl"] .wa-badge-new {
+    left: auto;
+    right: 1rem;
+}
+
+@media (min-width: 401px) {
+    .wa-card {
+        max-width: 400px;
+    }
+}

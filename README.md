@@ -34,6 +34,9 @@ Regenerate PDFs:
 .\scripts\generate-academy-pdfs.ps1
 ```
 
+**WhatsApp marketing cards** (screenshot on phone):
+`academy/whatsapp.html` — 17 designs + copy-paste text for each course/camp.
+
 ---
 
 1. [Project Overview](#project-overview)
