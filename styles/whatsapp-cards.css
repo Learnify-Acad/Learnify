@@ -41,7 +41,7 @@
 /* Each card = one WhatsApp image (screenshot) */
 .wa-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 550px;
     min-height: 520px;
     border-radius: 20px;
     padding: 1.75rem 1.5rem;
@@ -281,6 +281,6 @@ html[dir="rtl"] .wa-badge-new {
 
 @media (min-width: 401px) {
     .wa-card {
-        max-width: 400px;
+        max-width: 550px;
     }
 }

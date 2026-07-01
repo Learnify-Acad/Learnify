@@ -45,14 +45,16 @@ const academyTranslations = {
             beginner: 'مبتدئ — بدون خبرة'
         },
         courses: {
-            title: 'الكورسات الكاملة (طول العام)',
-            subtitle: 'كل كورس فيه مشاريع صغيرة كل أسبوع — ومشروع كبير في الآخر. لغة سهلة وشرح بالعربي.',
+            title: 'الكورسات — باقات واضحة',
+            subtitle: 'كل 4 حصص = 550 ج | الكورس الكامل حسب عدد الحصص (حد أقصى 6 أسابيع).',
+            pricingNote: '💡 4 حصص = 550 ج · 6 حصص = 825 ج · 8 حصص = 1,100 ج · 12 حصص = 1,650 ج',
             sc: {
                 name: 'Scratch والإبداع',
                 code: 'LF-SC',
                 age: '6–11 سنة | الصف 1–5',
-                duration: '12 أسبوع',
-                price: '550 ج (مجموعة)',
+                duration: '4–6 أسابيع (حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 6 حصص (كامل) = 825 ج',
+                price: '550 ج (4 حصص) · 825 ج (6 حصص)',
                 desc: 'أول خطوة: قصص ملونة وألعاب بسيطة بدون كتابة كود معقد.',
                 project: 'مشروع نهائي: لعبة "رحلة الفرعون"'
             },
@@ -60,8 +62,9 @@ const academyTranslations = {
                 name: 'صناعة الألعاب',
                 code: 'LF-GD',
                 age: '8–16 سنة | الصف 3+',
-                duration: '16 أسبوع',
-                price: '750 ج (مجموعة)',
+                duration: '4 أسابيع (2 حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 8 حصص (كامل) = 1,100 ج',
+                price: '550 ج (4 حصص) · 1,100 ج (8 حصص)',
                 desc: 'من لعبة Scratch لحد ألعاب أكبر — خطوة ورا خطوة.',
                 project: 'مشروع نهائي: لعبة مغامرة كاملة'
             },
@@ -69,8 +72,9 @@ const academyTranslations = {
                 name: 'الروبوتات',
                 code: 'LF-RB',
                 age: '7–16 سنة | الصف 5+',
-                duration: '20 أسبوع',
-                price: '850 ج (مجموعة)',
+                duration: '6 أسابيع (2 حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 12 حصص (كامل) = 1,650 ج',
+                price: '550 ج (4 حصص) · 1,650 ج (12 حصص)',
                 desc: 'توصيل دوائر، برمجة Arduino، وروبوت يتحرك من الموبايل.',
                 project: 'مشروع نهائي: روبوت بالبلوتوث'
             },
@@ -78,8 +82,9 @@ const academyTranslations = {
                 name: 'تطبيقات الموبايل',
                 code: 'LF-AP',
                 age: '9–15 سنة | الصف 5+',
-                duration: '12 أسبوع',
-                price: '650 ج (مجموعة)',
+                duration: '4–6 أسابيع (حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 6 حصص (كامل) = 825 ج',
+                price: '550 ج (4 حصص) · 825 ج (6 حصص)',
                 desc: 'تطبيق حقيقي على تليفون Android — كويز أو دليل أو ريموت.',
                 project: 'مشروع نهائي: تطبيق جاهز للعرض'
             },
@@ -87,8 +92,9 @@ const academyTranslations = {
                 name: 'صناعة المواقع',
                 code: 'LF-WB',
                 age: '10–16 سنة | الصف 6+',
-                duration: '14 أسبوع',
-                price: '700 ج (مجموعة)',
+                duration: '4–6 أسابيع (حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 6 حصص (كامل) = 825 ج',
+                price: '550 ج (4 حصص) · 825 ج (6 حصص)',
                 desc: 'صفحة شخصية وموقع بسيط — HTML و CSS بلغة سهلة.',
                 project: 'مشروع نهائي: موقع Portfolio'
             },
@@ -96,8 +102,9 @@ const academyTranslations = {
                 name: 'بايثون للمبتدئين',
                 code: 'LF-PY',
                 age: '10–18 سنة | الصف 6+',
-                duration: '16 أسبوع',
-                price: '800 ج (مجموعة)',
+                duration: '4 أسابيع (2 حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 8 حصص (كامل) = 1,100 ج',
+                price: '550 ج (4 حصص) · 1,100 ج (8 حصص)',
                 desc: 'برامج تفاعلية وألعاب نصية — أساس قوي للمستقبل.',
                 project: 'مشروع نهائي: محاكي أو لعبة نصية'
             },
@@ -105,8 +112,9 @@ const academyTranslations = {
                 name: 'اكتشف الذكاء الاصطناعي',
                 code: 'LF-AI',
                 age: '10–16 سنة | الصف 7+',
-                duration: '12 أسبوع',
-                price: '750 ج (مجموعة)',
+                duration: '4–6 أسابيع (حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج | 6 حصص (كامل) = 825 ج',
+                price: '550 ج (4 حصص) · 825 ج (6 حصص)',
                 desc: 'إزاي الكمبيوتر "يتعرف" على الصور — بدون رياضيات صعبة.',
                 project: 'مشروع نهائي: كاشف صور أو مساعد بسيط'
             },
@@ -114,22 +122,23 @@ const academyTranslations = {
                 name: 'أمان على الإنترنت',
                 code: 'LF-CY',
                 age: '11–16 سنة | الصف 7+',
-                duration: '8 أسابيع',
-                price: '500 ج (مجموعة)',
+                duration: '4 أسابيع (حصة/أسبوع)',
+                sessions: '4 حصص = 550 ج',
+                price: '550 ج (4 حصص)',
                 desc: 'حماية نفسك أونلاين — كلمات سر، خصوصية، وتصيّد.',
                 project: 'مشروع نهائي: دليل أمان رقمي'
             }
         },
         camps: {
             title: 'كامبات الصيف (أسبوعان)',
-            subtitle: '10 أيام مركّزة — في الآخر مشروع كبير ويوم عرض للأهالي (Demo Day).',
+            subtitle: '10 أيام عمل — مشروع كبير + Demo Day. نفس نظام تسعير الحصص.',
             specs: '4 ساعات يومياً | 9 ص – 1 م | مجموعات صغيرة | شهادة + فيديو مشروع',
-            ai: { name: 'كامب صناع AI', code: 'CAMP-AI', age: '10–16', price: '850 ج', desc: 'مشروع ذكاء يتعرف على صور أو يرد على أسئلة بسيطة.' },
-            gj: { name: 'كامب Game Jam', code: 'CAMP-GJ', age: '8–14', price: '550 ج', desc: 'لعبة Scratch كاملة في أسبوعين — الأكثر متعة للأطفال!' },
-            rb: { name: 'كامب الروبوت', code: 'CAMP-RB', age: '9–16', price: '950 ج', desc: 'روبوت + تحكم من الموبايل. فرق 2–3 طلاب.' },
-            ap: { name: 'كامب التطبيقات', code: 'CAMP-AP', age: '10–15', price: '650 ج', desc: 'تطبيق موبايل جاهز في أسبوعين.' },
-            wb: { name: 'كامب الويب', code: 'CAMP-WB', age: '11–16', price: '750 ج', desc: 'موقع شخصي تفاعلي — أول خطوة في عالم الويب.' },
-            in: { name: 'كامب المخترع الصغير', code: 'CAMP-IN', age: '6–9', price: '450 ج', desc: 'للصغار: قصة تفاعلية + نشاط يدوي ممتع.' },
+            ai: { name: 'كامب صناع AI', code: 'CAMP-AI', age: '10–16', price: '1,100 ج (8 حصص)', sessions: '8 حصص / أسبوعين', desc: 'مشروع ذكاء يتعرف على صور أو يرد على أسئلة بسيطة.' },
+            gj: { name: 'كامب Game Jam', code: 'CAMP-GJ', age: '8–14', price: '825 ج (6 حصص)', sessions: '6 حصص / أسبوعين', desc: 'لعبة Scratch كاملة — الأكثر متعة للأطفال!' },
+            rb: { name: 'كامب الروبوت', code: 'CAMP-RB', age: '9–16', price: '1,650 ج (12 حصص)', sessions: '12 حصص / أسبوعين · فرق 2–3', desc: 'روبوت + تحكم من الموبايل.' },
+            ap: { name: 'كامب التطبيقات', code: 'CAMP-AP', age: '10–15', price: '1,100 ج (8 حصص)', sessions: '8 حصص / أسبوعين', desc: 'تطبيق موبايل جاهز في أسبوعين.' },
+            wb: { name: 'كامب الويب', code: 'CAMP-WB', age: '11–16', price: '1,100 ج (8 حصص)', sessions: '8 حصص / أسبوعين', desc: 'موقع شخصي تفاعلي — أول خطوة في عالم الويب.' },
+            in: { name: 'كامب المخترع الصغير', code: 'CAMP-IN', age: '6–9', price: '550 ج (4 حصص)', sessions: '4 حصص / أسبوعين', desc: 'للصغار: قصة تفاعلية + نشاط يدوي ممتع.' },
             demo: 'يوم العرض: الطفل يشرح مشروعه 5 دقائق قدام الأهل — وياخد شهادة وجائزة.'
         },
         age: {
@@ -151,8 +160,8 @@ const academyTranslations = {
             faq3a: 'لا — بنتكلم عربي بسيط، ومصطلحات إنجليزية أساسية فقط. 80% وقت عملي على الكمبيوتر.'
         },
         pricing: {
-            title: 'أسعار مناسبة للأسرة المصرية',
-            note: 'أسعار مجموعات — تقسيط متاح. برايفت: اسأل على واتساب.',
+            title: 'نظام التسعير',
+            note: '4 حصص = 550 ج | كل 4 حصص إضافية = +550 ج | أقصى مدة 6 أسابيع | تقسيط متاح',
             campBundle: 'كامب + كورس خريف: خصم 15%',
             siblings: 'أخ/أخت تاني: خصم 10%'
         },
@@ -215,14 +224,16 @@ const academyTranslations = {
             beginner: 'Beginners welcome'
         },
         courses: {
-            title: 'Full-Year Courses',
-            subtitle: 'Small weekly projects plus one big final project. Simple language, Arabic-first teaching.',
+            title: 'Courses — clear packages',
+            subtitle: 'Every 4 sessions = 550 EGP | Full course priced by session count (max 6 weeks).',
+            pricingNote: '💡 4 sessions = 550 EGP · 6 = 825 · 8 = 1,100 · 12 = 1,650',
             sc: {
                 name: 'Scratch & Creativity',
                 code: 'LF-SC',
                 age: 'Ages 6–11 | Grades 1–5',
-                duration: '12 weeks',
-                price: '550 EGP (group)',
+                duration: '4–6 weeks (1 session/week)',
+                sessions: '4 sessions = 550 EGP | 6 full = 825 EGP',
+                price: '550 EGP (4) · 825 EGP (6)',
                 desc: 'First step: colorful stories and easy games — no hard typing.',
                 project: 'Final: "Pharaoh\'s Journey" game'
             },
@@ -230,8 +241,9 @@ const academyTranslations = {
                 name: 'Game Creators',
                 code: 'LF-GD',
                 age: 'Ages 8–16 | Grade 3+',
-                duration: '16 weeks',
-                price: '750 EGP (group)',
+                duration: '4 weeks (2 sessions/week)',
+                sessions: '4 sessions = 550 EGP | 8 full = 1,100 EGP',
+                price: '550 EGP (4) · 1,100 EGP (8)',
                 desc: 'From Scratch games to bigger projects — one step at a time.',
                 project: 'Final: full adventure game'
             },
@@ -239,8 +251,9 @@ const academyTranslations = {
                 name: 'Robo Engineers',
                 code: 'LF-RB',
                 age: 'Ages 7–16 | Grade 5+',
-                duration: '20 weeks',
-                price: '850 EGP (group)',
+                duration: '6 weeks (2 sessions/week)',
+                sessions: '4 sessions = 550 EGP | 12 full = 1,650 EGP',
+                price: '550 EGP (4) · 1,650 EGP (12)',
                 desc: 'Circuits, Arduino, and a robot you control from your phone.',
                 project: 'Final: Bluetooth robot'
             },
@@ -248,8 +261,9 @@ const academyTranslations = {
                 name: 'App Builders',
                 code: 'LF-AP',
                 age: 'Ages 9–15 | Grade 5+',
-                duration: '12 weeks',
-                price: '650 EGP (group)',
+                duration: '4–6 weeks (1 session/week)',
+                sessions: '4 sessions = 550 EGP | 6 full = 825 EGP',
+                price: '550 EGP (4) · 825 EGP (6)',
                 desc: 'A real Android app — quiz, guide, or remote control.',
                 project: 'Final: app ready to demo'
             },
@@ -257,8 +271,9 @@ const academyTranslations = {
                 name: 'Web Makers',
                 code: 'LF-WB',
                 age: 'Ages 10–16 | Grade 6+',
-                duration: '14 weeks',
-                price: '700 EGP (group)',
+                duration: '4–6 weeks (1 session/week)',
+                sessions: '4 sessions = 550 EGP | 6 full = 825 EGP',
+                price: '550 EGP (4) · 825 EGP (6)',
                 desc: 'Personal page and simple website — HTML & CSS made easy.',
                 project: 'Final: portfolio website'
             },
@@ -266,8 +281,9 @@ const academyTranslations = {
                 name: 'Python Pioneers',
                 code: 'LF-PY',
                 age: 'Ages 10–18 | Grade 6+',
-                duration: '16 weeks',
-                price: '800 EGP (group)',
+                duration: '4 weeks (2 sessions/week)',
+                sessions: '4 sessions = 550 EGP | 8 full = 1,100 EGP',
+                price: '550 EGP (4) · 1,100 EGP (8)',
                 desc: 'Interactive programs and text games — strong base for the future.',
                 project: 'Final: simulator or text game'
             },
@@ -275,8 +291,9 @@ const academyTranslations = {
                 name: 'AI Explorers',
                 code: 'LF-AI',
                 age: 'Ages 10–16 | Grade 7+',
-                duration: '12 weeks',
-                price: '750 EGP (group)',
+                duration: '4–6 weeks (1 session/week)',
+                sessions: '4 sessions = 550 EGP | 6 full = 825 EGP',
+                price: '550 EGP (4) · 825 EGP (6)',
                 desc: 'How computers "recognize" pictures — no hard math.',
                 project: 'Final: image detector or simple assistant'
             },
@@ -284,22 +301,23 @@ const academyTranslations = {
                 name: 'Cyber Guardians',
                 code: 'LF-CY',
                 age: 'Ages 11–16 | Grade 7+',
-                duration: '8 weeks',
-                price: '500 EGP (group)',
+                duration: '4 weeks (1 session/week)',
+                sessions: '4 sessions = 550 EGP',
+                price: '550 EGP (4 sessions)',
                 desc: 'Stay safe online — passwords, privacy, and phishing.',
                 project: 'Final: digital safety guide'
             }
         },
         camps: {
             title: 'Summer Camps (2 weeks)',
-            subtitle: '10 focused days — one big project and a Demo Day for parents.',
+            subtitle: '10 working days — big project + Demo Day. Same session-based pricing.',
             specs: '4 hours daily | 9 AM – 1 PM | small groups | certificate + project video',
-            ai: { name: 'AI Makers Camp', code: 'CAMP-AI', age: '10–16', price: '850 EGP', desc: 'AI project that recognizes images or answers simple questions.' },
-            gj: { name: 'Game Jam Camp', code: 'CAMP-GJ', age: '8–14', price: '550 EGP', desc: 'Full Scratch game in two weeks — kids love this one!' },
-            rb: { name: 'Robot Command Camp', code: 'CAMP-RB', age: '9–16', price: '950 EGP', desc: 'Robot + phone control. Teams of 2–3.' },
-            ap: { name: 'App Launch Camp', code: 'CAMP-AP', age: '10–15', price: '650 EGP', desc: 'Mobile app ready in two weeks.' },
-            wb: { name: 'Web Studio Camp', code: 'CAMP-WB', age: '11–16', price: '750 EGP', desc: 'Interactive personal website — first step into the web.' },
-            in: { name: 'Young Inventor Camp', code: 'CAMP-IN', age: '6–9', price: '450 EGP', desc: 'For little ones: interactive story + fun hands-on activity.' },
+            ai: { name: 'AI Makers Camp', code: 'CAMP-AI', age: '10–16', price: '1,100 EGP (8 sessions)', sessions: '8 sessions / 2 weeks', desc: 'AI project that recognizes images or answers simple questions.' },
+            gj: { name: 'Game Jam Camp', code: 'CAMP-GJ', age: '8–14', price: '825 EGP (6 sessions)', sessions: '6 sessions / 2 weeks', desc: 'Full Scratch game in two weeks — kids love this one!' },
+            rb: { name: 'Robot Command Camp', code: 'CAMP-RB', age: '9–16', price: '1,650 EGP (12 sessions)', sessions: '12 sessions / 2 weeks · teams 2–3', desc: 'Robot + phone control.' },
+            ap: { name: 'App Launch Camp', code: 'CAMP-AP', age: '10–15', price: '1,100 EGP (8 sessions)', sessions: '8 sessions / 2 weeks', desc: 'Mobile app ready in two weeks.' },
+            wb: { name: 'Web Studio Camp', code: 'CAMP-WB', age: '11–16', price: '1,100 EGP (8 sessions)', sessions: '8 sessions / 2 weeks', desc: 'Interactive personal website — first step into the web.' },
+            in: { name: 'Young Inventor Camp', code: 'CAMP-IN', age: '6–9', price: '550 EGP (4 sessions)', sessions: '4 sessions / 2 weeks', desc: 'For little ones: interactive story + fun hands-on activity.' },
             demo: 'Demo Day: your child presents for 5 minutes — certificate and awards.'
         },
         age: {
@@ -321,8 +339,8 @@ const academyTranslations = {
             faq3a: 'No — simple Arabic, basic English terms only. 80% hands-on computer time.'
         },
         pricing: {
-            title: 'Affordable family pricing',
-            note: 'Group rates — installments available. Private lessons: ask on WhatsApp.',
+            title: 'Pricing model',
+            note: '4 sessions = 550 EGP | each extra 4 sessions = +550 EGP | max 6 weeks | installments available',
             campBundle: 'Camp + fall course: 15% off',
             siblings: 'Second sibling: 10% off'
         },
